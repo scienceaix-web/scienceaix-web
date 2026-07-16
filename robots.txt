@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scienceaix-web.github.io/scienceaix-web/sitemap.xml

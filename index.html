@@ -1,1269 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScienceAiX | Discover the Future Through Science</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScienceAiX | Discover the Future of Science</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-primary: #0a0a0c;
+      --bg-secondary: #121216;
+      --accent-yellow: #f5c518;
+      --text-main: #f5f5f7;
+      --text-muted: #86868b;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="ScienceAiX transforms science into beautiful, understandable, cinematic educational experiences. Explore our Knowledge Library, Missions, and AI Tools today.">
-    <meta name="keywords" content="ScienceAiX, science education, interactive learning, space missions, physics visualization, AI science tools, cinematic education">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://scienceaix.com/">
-    <meta property="og:title" content="ScienceAiX | Discover the Future Through Science">
-    <meta property="og:description" content="Beautiful, understandable, cinematic educational experiences built to unlock the universe.">
-    <meta property="og:image" content="https://scienceaix.com/assets/og-image.jpg">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --primary: #00FF66;       /* Bioluminescent Sci-Fi Green */
-            --primary-rgb: 0, 255, 102;
-            --secondary: #050505;     /* True Premium Black */
-            --surface-low: #0B0B0B;   /* Deep charcoal interface card background */
-            --surface-high: #121212;  /* Elevated element background */
-            --accent: #FFFFFF;        /* Crisp White text/elements */
-            --text-muted: #9A9A9A;    /* Balanced gray for secondary text */
-            --border: rgba(255, 255, 255, 0.07);
-            --border-hover: rgba(0, 255, 102, 0.3);
-            --font-sans: 'Inter', sans-serif;
-            --font-display: 'Syne', sans-serif;
-            --font-serif: 'Playfair Display', serif;
-            --ease: cubic-bezier(0.16, 1, 0.3, 1);
-            --transition: all 0.5s var(--ease);
-        }
-
-        /* --- GLOBAL BASE STYLES --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html, body {
-            background-color: var(--secondary);
-            color: var(--accent);
-            font-family: var(--font-sans);
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* --- LAYOUT UTILITIES --- */
-        .container {
-            max-width: 1340px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-        @media (max-width: 768px) {
-            .container { padding: 0 24px; }
-        }
-
-        .section-padding {
-            padding: 120px 0;
-        }
-        @media (max-width: 768px) {
-            .section-padding { padding: 80px 0; }
-        }
-
-        /* Ambient background grids */
-        .bg-grid {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: 
-                linear-gradient(to right, rgba(255,255,255,0.01) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255,255,255,0.01) 1px, transparent 1px);
-            background-size: 80px 80px;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        /* Background Particle Canvas */
-        #particle-canvas {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 2;
-            pointer-events: none;
-            opacity: 0.6;
-        }
-
-        /* Glowing environmental backdrops */
-        .glow-orb {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(var(--primary-rgb), 0.06) 0%, rgba(0,0,0,0) 70%);
-            z-index: 1;
-            pointer-events: none;
-            filter: blur(60px);
-        }
-
-        /* --- ANIMATION CONTROLLER --- */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* --- TYPOGRAPHY --- */
-        h1, h2, h3, h4 {
-            font-family: var(--font-display);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-        }
-
-        .serif-italic {
-            font-family: var(--font-serif);
-            font-weight: 400;
-            font-style: italic;
-            letter-spacing: 0;
-            text-transform: none;
-        }
-
-        /* --- INTERACTIVE BUTTONS --- */
-        .btn-group {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        @media (max-width: 480px) {
-            .btn-group { flex-direction: column; align-items: stretch; width: 100%; }
-        }
-
-        .btn {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px 36px;
-            border-radius: 100px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-decoration: none;
-            color: var(--accent);
-            background: transparent;
-            border: 1px solid var(--border);
-            cursor: pointer;
-            overflow: hidden;
-            transition: var(--transition);
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--secondary);
-            border-color: var(--accent);
-            font-weight: 600;
-        }
-
-        .btn-primary:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: var(--secondary);
-            box-shadow: 0 10px 30px rgba(var(--primary-rgb), 0.25);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--accent);
-            background: rgba(255, 255, 255, 0.03);
-            transform: translateY(-2px);
-        }
-
-        /* --- NAVIGATION HEADER --- */
-        header {
-            position: fixed;
-            top: 0; left: 0; width: 100%;
-            z-index: 9999;
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            background: rgba(5, 5, 5, 0.75);
-        }
-
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 90px;
-        }
-
-        .brand-logo {
-            font-family: var(--font-display);
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--accent);
-            text-decoration: none;
-            letter-spacing: -1.5px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .brand-logo span {
-            color: var(--primary);
-        }
-
-        nav {
-            display: flex;
-            gap: 28px;
-        }
-        @media (max-width: 1024px) {
-            nav { display: none; }
-        }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: -0.01em;
-            transition: var(--transition);
-        }
-
-        nav a:hover, nav a.active {
-            color: var(--primary);
-        }
-
-        /* --- HERO SECTION --- */
-        .hero-section {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding-top: 130px;
-            z-index: 5;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 980px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .pill-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border);
-            padding: 8px 20px;
-            border-radius: 100px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--primary);
-            margin-bottom: 32px;
-        }
-
-        .hero-section h1 {
-            font-size: 5.5rem;
-            line-height: 1.05;
-            letter-spacing: -0.04em;
-            margin-bottom: 28px;
-            background: linear-gradient(180deg, #FFFFFF 30%, rgba(255,255,255,0.6) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        @media (max-width: 900px) {
-            .hero-section h1 { font-size: 3.8rem; }
-        }
-        @media (max-width: 600px) {
-            .hero-section h1 { font-size: 2.8rem; }
-        }
-
-        .hero-section p {
-            font-size: 1.35rem;
-            line-height: 1.6;
-            color: var(--text-muted);
-            max-width: 780px;
-            margin-bottom: 48px;
-            font-weight: 400;
-        }
-
-        /* --- FEATURED KNOWLEDGE LIBRARY --- */
-        .explorer-section {
-            position: relative;
-            z-index: 10;
-            background: var(--surface-low);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .section-header {
-            max-width: 700px;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 3rem;
-            margin-bottom: 24px;
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 1.15rem;
-            line-height: 1.6;
-        }
-
-        /* Search & Filter Elements */
-        .search-container {
-            max-width: 500px;
-            position: relative;
-            margin-bottom: 40px;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 16px 24px;
-            padding-left: 56px;
-            background: rgba(255,255,255,0.02);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            color: var(--accent);
-            font-family: var(--font-sans);
-            font-size: 1rem;
-            outline: none;
-            transition: var(--transition);
-        }
-
-        .search-input:focus {
-            border-color: var(--primary);
-            background: rgba(255,255,255,0.04);
-            box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.1);
-        }
-
-        .search-icon {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-            pointer-events: none;
-        }
-
-        .filter-tabs {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 48px;
-            overflow-x: auto;
-            padding-bottom: 10px;
-        }
-
-        .tab-btn {
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            padding: 10px 24px;
-            border-radius: 100px;
-            font-family: var(--font-sans);
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: var(--transition);
-        }
-
-        .tab-btn:hover, .tab-btn.active {
-            color: var(--accent);
-            border-color: var(--accent);
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .tab-btn.active {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        /* Card Grid Layout */
-        .showcase-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 30px;
-        }
-
-        .showcase-card {
-            grid-column: span 4;
-            background: var(--surface-high);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 380px;
-            position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-        @media (max-width: 1024px) {
-            .showcase-card { grid-column: span 6; }
-        }
-        @media (max-width: 680px) {
-            .showcase-card { grid-column: span 12; }
-        }
-
-        .showcase-card.featured {
-            grid-column: span 8;
-        }
-        @media (max-width: 1024px) {
-            .showcase-card.featured { grid-column: span 12; }
-        }
-
-        .showcase-card::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(180deg, rgba(var(--primary-rgb), 0.03) 0%, transparent 100%);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .showcase-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--border-hover);
-        }
-
-        .showcase-card:hover::after {
-            opacity: 1;
-        }
-
-        .card-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .card-tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        .card-icon-box {
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent);
-        }
-
-        .showcase-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
-
-        .showcase-card p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 32px;
-        }
-
-        .card-action-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .showcase-card:hover .card-action-link {
-            color: var(--primary);
-        }
-
-        .showcase-card:hover .card-action-link svg {
-            transform: translateX(4px);
-            stroke: var(--primary);
-        }
-
-        /* --- MISSIONS & AI TOOLS BENTO GRID --- */
-        .missions-tools-section {
-            position: relative;
-            z-index: 10;
-        }
-
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 24px;
-        }
-
-        .bento-item {
-            background: var(--surface-low);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 48px;
-            position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-        
-        .bento-item:hover {
-            border-color: var(--border-hover);
-        }
-
-        .bento-item.col-8 { grid-column: span 8; }
-        .bento-item.col-4 { grid-column: span 4; }
-        .bento-item.col-12 { grid-column: span 12; display: flex; align-items: center; justify-content: space-between; }
-
-        @media (max-width: 900px) {
-            .bento-item.col-8, .bento-item.col-4 { grid-column: span 12; }
-            .bento-item.col-12 { flex-direction: column; align-items: flex-start; gap: 32px; }
-        }
-
-        .bento-tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--primary);
-            font-weight: 700;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .bento-item h3 {
-            font-size: 2rem;
-            margin-bottom: 14px;
-        }
-
-        .bento-item p {
-            color: var(--text-muted);
-            line-height: 1.6;
-            font-size: 1.05rem;
-            margin-bottom: 24px;
-        }
-
-        /* --- VIDEOS & MEDIA GRID --- */
-        .media-section {
-            position: relative;
-            z-index: 10;
-            background: rgba(5,5,5,0.5);
-            border-top: 1px solid var(--border);
-        }
-
-        .media-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 30px;
-        }
-
-        .media-card {
-            background: var(--surface-low);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .media-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-4px);
-        }
-
-        .media-card.youtube {
-            grid-column: span 8;
-        }
-
-        .media-card.tiktok {
-            grid-column: span 4;
-        }
-
-        @media (max-width: 900px) {
-            .media-card.youtube, .media-card.tiktok {
-                grid-column: span 12;
-            }
-        }
-
-        .media-placeholder {
-            width: 100%;
-            height: 240px;
-            background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .media-placeholder.portrait {
-            height: 380px;
-        }
-
-        .play-button {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            background: var(--accent);
-            color: var(--secondary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-
-        .media-card:hover .play-button {
-            background: var(--primary);
-            box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.4);
-            transform: scale(1.1);
-        }
-
-        .media-info {
-            padding: 30px;
-        }
-
-        .media-info h4 {
-            font-size: 1.4rem;
-            margin-bottom: 12px;
-        }
-
-        .media-info p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        /* --- NEWSLETTER SIGNUP --- */
-        .newsletter-section {
-            position: relative;
-            z-index: 10;
-            border-top: 1px solid var(--border);
-            background: linear-gradient(180deg, var(--secondary) 0%, #001a0a 100%);
-        }
-
-        .newsletter-container {
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .newsletter-container h2 {
-            font-size: 3rem;
-            margin-bottom: 16px;
-        }
-
-        .newsletter-container p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-
-        .newsletter-form {
-            display: flex;
-            gap: 12px;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 8px;
-            border-radius: 100px;
-            border: 1px solid var(--border);
-            transition: var(--transition);
-        }
-
-        .newsletter-form:focus-within {
-            border-color: var(--primary);
-            box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.15);
-        }
-
-        .newsletter-form input {
-            flex: 1;
-            background: transparent;
-            border: none;
-            outline: none;
-            color: var(--accent);
-            padding: 0 24px;
-            font-family: var(--font-sans);
-            font-size: 1rem;
-        }
-
-        .newsletter-form button {
-            background: var(--primary);
-            color: var(--secondary);
-            border: none;
-            outline: none;
-            padding: 14px 32px;
-            border-radius: 100px;
-            font-weight: 600;
-            font-family: var(--font-sans);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .newsletter-form button:hover {
-            opacity: 0.9;
-            transform: scale(1.02);
-        }
-
-        @media (max-width: 600px) {
-            .newsletter-form {
-                flex-direction: column;
-                background: transparent;
-                border: none;
-                padding: 0;
-                gap: 16px;
-            }
-            .newsletter-form input {
-                background: rgba(255, 255, 255, 0.02);
-                border: 1px solid var(--border);
-                padding: 16px 24px;
-                border-radius: 100px;
-            }
-        }
-
-        /* --- FOOTER PLATFORM --- */
-        footer {
-            background: #020202;
-            border-top: 1px solid var(--border);
-            padding: 100px 0 50px 0;
-            position: relative;
-            z-index: 10;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr repeat(3, 1fr);
-            gap: 60px;
-            margin-bottom: 80px;
-        }
-        @media (max-width: 900px) {
-            .footer-grid { grid-template-columns: 1fr repeat(2, 1fr); gap: 40px; }
-        }
-        @media (max-width: 600px) {
-            .footer-grid { grid-template-columns: 1fr; }
-        }
-
-        .footer-brand p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-top: 20px;
-            max-width: 320px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 16px;
-            margin-top: 24px;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            transition: var(--transition);
-        }
-
-        .social-icon:hover {
-            color: var(--primary);
-            border-color: var(--primary);
-            background: rgba(var(--primary-rgb), 0.05);
-        }
-
-        .footer-col h4 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--accent);
-            margin-bottom: 24px;
-        }
-
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col li {
-            margin-bottom: 14px;
-        }
-
-        .footer-col a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: var(--transition);
-        }
-
-        .footer-col a:hover {
-            color: var(--primary);
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 40px;
-            border-top: 1px solid var(--border);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-        @media (max-width: 600px) {
-            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
-        }
-    </style>
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: var(--accent-yellow);
+      margin: 0.75rem auto 0;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(10, 10, 12, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: var(--border-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo span {
+      border-left: 4px solid var(--accent-yellow);
+      padding-left: 8px;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1.5rem;
+      background: radial-gradient(circle at center, rgba(20, 20, 25, 0.8) 0%, var(--bg-primary) 100%);
+      position: relative;
+    }
+
+    .hero-badge {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent-yellow);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      max-width: 800px;
+      margin-bottom: 1.5rem;
+      line-height: 1.15;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 { font-size: 5rem; }
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: var(--text-main);
+      color: var(--bg-primary);
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+    }
+
+    .section-padding {
+      padding: 8rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .about-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .img-placeholder {
+      background: var(--bg-secondary);
+      border: var(--border-color);
+      aspect-ratio: 16/10;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .img-placeholder::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(45deg, rgba(245,197,24,0.03) 0%, transparent 100%);
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+
+    .tab-btn.active {
+      color: var(--text-main);
+      border-bottom: 2px solid var(--accent-yellow);
+    }
+
+    .library-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--bg-secondary);
+      border: var(--border-color);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(245,197,24,0.3);
+    }
+
+    .card-tag {
+      color: var(--accent-yellow);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .video-card {
+      background: var(--bg-secondary);
+      border-radius: 16px;
+      overflow: hidden;
+      border: var(--border-color);
+    }
+
+    .video-thumb {
+      aspect-ratio: 16/9;
+      background: #1c1c22;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      position: relative;
+    }
+
+    .play-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(5px);
+      transition: var(--transition);
+    }
+
+    .video-card:hover .play-icon {
+      background: var(--accent-yellow);
+      color: var(--bg-primary);
+      transform: scale(1.1);
+    }
+
+    .video-info {
+      padding: 1.5rem;
+    }
+
+    .mission-box {
+      background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+      border: var(--border-color);
+      padding: 4rem 2rem;
+      border-radius: 24px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .mission-box p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    footer {
+      border-top: var(--border-color);
+      padding: 4rem 2rem;
+      text-align: center;
+      background: var(--bg-secondary);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-yellow);
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
 </head>
 <body>
 
-    <div class="bg-grid"></div>
+  <nav>
+    <a href="#" class="logo"><span>ScienceAiX</span></a>
+    <a href="#library" class="btn" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Explore</a>
+  </nav>
 
-    <!-- NAVIGATION PLATFORM -->
-    <header>
-        <div class="container nav-wrapper">
-            <a href="#" class="brand-logo">Science<span>AiX</span></a>
-            <nav>
-                <a href="#" class="active">Home</a>
-                <a href="#library">Knowledge Library</a>
-                <a href="#missions">Missions</a>
-                <a href="#media">Articles</a>
-                <a href="#media">Videos</a>
-                <a href="#missions">AI Tools</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </nav>
-            <div>
-                <a href="#library" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.85rem;">Start Learning</a>
-            </div>
+  <header class="hero">
+    <div class="hero-badge">The Frontier of Understanding</div>
+    <h1>Where Advanced Intelligence Meets Global Discovery.</h1>
+    <p>We are mapping the unknown—uniting technical research datasets with beautiful media storytelling to document our evolving universe.</p>
+    <a href="#about" class="btn">Read the Launch Edition</a>
+  </header>
+
+  <section id="about" class="section-padding">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">A Modular View of Our Planet's Systems</h2>
+        <p>ScienceAiX serves as an open-access container for collaborative study files, research essays, and rich data collections.</p>
+        <p>Our goal is simplicity: beautiful code interfaces presenting unfiltered planetary insights to researchers and curious minds worldwide.</p>
+      </div>
+      <div class="img-placeholder">
+        [ Visual Asset Awaiting Upload ]
+      </div>
+    </div>
+  </section>
+
+  <section id="library" style="background-color: var(--bg-secondary);">
+    <div class="section-padding">
+      <h2 class="section-title">Knowledge Library</h2>
+      
+      <div class="tabs">
+        <button class="tab-btn active" onclick="filterTab('all')">All Briefs</button>
+        <button class="tab-btn" onclick="filterTab('ai')">Artificial Intelligence</button>
+        <button class="tab-btn" onclick="filterTab('earth')">Earth Systems</button>
+      </div>
+
+      <div class="library-grid">
+        <div class="card" data-cat="ai">
+          <div class="card-tag">Research Brief</div>
+          <h3>Machine Analysis of Micro-Climatic Trends</h3>
+          <p>Analyzing localized weather sensor matrices using algorithmic modeling frameworks to spot generational deviations.</p>
         </div>
-    </header>
-
-    <!-- CINEMATIC HERO FIELD -->
-    <section class="hero-section">
-        <div class="glow-orb" style="top: -100px; left: 50%; transform: translateX(-50%);"></div>
-        <canvas id="particle-canvas"></canvas>
-        
-        <div class="container hero-content">
-            <div class="pill-badge">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"></circle></svg>
-                Next-Gen Cinematic Education
-            </div>
-            <h1>Discover the Future<br>Through Science.</h1>
-            <p>ScienceAiX transforms science into beautiful, understandable, cinematic educational experiences.</p>
-            <div class="btn-group">
-                <a href="#library" class="btn btn-primary">Start Learning</a>
-                <a href="#library" class="btn btn-secondary">
-                    Knowledge Library
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-            </div>
+        <div class="card" data-cat="earth">
+          <div class="card-tag">Expedition Dispatch</div>
+          <h3>Deep Ocean Chemical Baseline Studies</h3>
+          <p>A closer editorial review of hydrothermal activity recordings gathered along the oceanic trench networks.</p>
         </div>
-    </section>
-
-    <!-- FEATURED KNOWLEDGE LIBRARY -->
-    <section class="explorer-section section-padding" id="library">
-        <div class="glow-orb" style="bottom: -200px; right: -100px;"></div>
-        <div class="container">
-            
-            <div class="section-header reveal">
-                <h2>Featured Knowledge Library</h2>
-                <p>Immerse yourself in deeply visual, interactive explorations of the universe’s most profound mechanics.</p>
-            </div>
-
-            <!-- Client Engine UI Search Controls -->
-            <div class="search-container reveal">
-                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <input type="text" class="search-input" id="moduleSearch" placeholder="Search the library (e.g., Space, Physics, Genome)...">
-            </div>
-
-            <div class="filter-tabs reveal">
-                <button class="tab-btn active" data-filter="all">All Subjects</button>
-                <button class="tab-btn" data-filter="physics">Physics</button>
-                <button class="tab-btn" data-filter="space">Space</button>
-                <button class="tab-btn" data-filter="biology">Biology</button>
-            </div>
-
-            <!-- Dynamic Target Cards Container -->
-            <div class="showcase-grid" id="showcaseGrid">
-                
-                <div class="showcase-card featured reveal" data-category="space">
-                    <div class="card-meta">
-                        <span class="card-tag">Library Core // Space</span>
-                        <div class="card-icon-box">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>The James Webb Deep Field</h3>
-                        <p>Travel to the edge of the observable universe. Analyze structural cosmic shift data and observe spectacular star birth fields through precise IR spectrum rendering.</p>
-                        <a href="#" class="card-action-link">
-                            Begin Exploration
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="showcase-card reveal" data-category="biology">
-                    <div class="card-meta">
-                        <span class="card-tag">Library Core // Biology</span>
-                        <div class="card-icon-box">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2.5 3.19-2.5 5.5h20c0-2.31-1-4.24-2.5-5.5"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>The Molecular Engine</h3>
-                        <p>Deconstruct the atomic architecture of living cells. Watch ATP synthase engines generate kinetic biological units in absolute realtime.</p>
-                        <a href="#" class="card-action-link">
-                            Begin Exploration
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="showcase-card reveal" data-category="physics">
-                    <div class="card-meta">
-                        <span class="card-tag">Library Core // Physics</span>
-                        <div class="card-icon-box">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l9 4.91v10.18L12 22l-9-4.91V6.91L12 2z"></path></svg>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>Quantum Superposition</h3>
-                        <p>Interact with particles as they exist in multiple simultaneous states. Discover how probability models determine physical observation outcomes.</p>
-                        <a href="#" class="card-action-link">
-                            Begin Exploration
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="showcase-card featured reveal" data-category="space">
-                    <div class="card-meta">
-                        <span class="card-tag">Library Core // Space</span>
-                        <div class="card-icon-box">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path></svg>
-                        </div>
-                    </div>
-                    <div>
-                        <h3>Event Horizon Accretion Disks</h3>
-                        <p>Experience gravitational lensing around supermassive singularity systems. Visually analyze optical path distortion under extreme space-time warp events.</p>
-                        <a href="#" class="card-action-link">
-                            Begin Exploration
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+        <div class="card" data-cat="ai">
+          <div class="card-tag">Systems</div>
+          <h3>Predictive Models for Planetary Ecosystems</h3>
+          <p>Using neural network weights to anticipate biospheric stress indices before they reach critical collapse thresholds.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- MISSIONS & AI TOOLS BENTO GRID -->
-    <section class="missions-tools-section section-padding" id="missions">
-        <div class="container">
-            <div class="bento-grid">
-                
-                <div class="bento-item col-4 reveal">
-                    <span class="bento-tag">Empirical Missions</span>
-                    <h3>ScienceAiX Missions</h3>
-                    <p>Our ongoing global scientific expeditions tracking real-world environmental shifts, geological structures, and remote cosmic telemetry logs.</p>
-                    <a href="#" class="btn btn-secondary" style="padding: 10px 24px; font-size: 0.85rem;">Explore Active Missions</a>
-                </div>
-
-                <div class="bento-item col-8 reveal">
-                    <span class="bento-tag">AI Engines</span>
-                    <h3>AI Intelligent Tools</h3>
-                    <p>Simplify calculations with advanced machine learning systems. Input raw formulas, genetic sequences, or astrophysical coordinates and watch our engine render clear, step-by-step visual solution models.</p>
-                    <div style="width: 100%; height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden; margin-top: 16px;">
-                        <div style="width: 88%; height: 100%; background: var(--primary); box-shadow: 0 0 10px var(--primary);"></div>
-                    </div>
-                </div>
-
-                <div class="bento-item col-12 reveal">
-                    <div>
-                        <h3>The Unified Curriculum Academy</h3>
-                        <p style="margin: 0;">Explore structured study guides dynamically aligned with world-class curriculum frameworks for ultimate comprehension.</p>
-                    </div>
-                    <a href="#" class="btn btn-primary" style="padding: 14px 28px; font-size: 0.9rem;">Join Launch Academy</a>
-                </div>
-
-            </div>
+  <section class="section-padding">
+    <h2 class="section-title">Field Documentaries</h2>
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-thumb">
+          <div class="play-icon">▶</div>
         </div>
-    </section>
-
-    <!-- FEATURED YOUTUBE VIDEOS & TIKTOK SHORTS & ARTICLES -->
-    <section class="media-section section-padding" id="media">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Latest Media & Editorial Articles</h2>
-                <p>Stay ahead with our custom high-fidelity scientific journals, cinematic YouTube insights, and swift TikTok shorts.</p>
-            </div>
-
-            <div class="media-grid">
-                <!-- YouTube Highlight (Wide) -->
-                <div class="media-card youtube reveal">
-                    <div class="media-placeholder">
-                        <div class="play-button">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                        </div>
-                    </div>
-                    <div class="media-info">
-                        <span class="card-tag" style="display: block; margin-bottom: 8px;">Featured Video</span>
-                        <h4>Mapping the Outer Solar System</h4>
-                        <p>Explore the vast distances beyond Neptune. Learn how infrared imaging platforms detect hidden orbital dynamics in the deep, cold outer space corridors.</p>
-                    </div>
-                </div>
-
-                <!-- TikTok Short (Tall) -->
-                <div class="media-card tiktok reveal">
-                    <div class="media-placeholder portrait">
-                        <div class="play-button">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                        </div>
-                    </div>
-                    <div class="media-info">
-                        <span class="card-tag" style="display: block; margin-bottom: 8px;">TikTok Short</span>
-                        <h4>How Light Bends</h4>
-                        <p>Gravity warping photons in under 60 seconds.</p>
-                    </div>
-                </div>
-
-                <!-- Article 1 -->
-                <div class="media-card tiktok reveal">
-                    <div class="media-info" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                        <div>
-                            <span class="card-tag" style="display: block; margin-bottom: 12px;">Scientific Article</span>
-                            <h4 style="font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 1.6rem;">Deep Ocean Geothermal Vents</h4>
-                            <p style="margin-top: 10px;">Uncovering chemosynthetic ecosystems thriving at extreme depths without solar radiation input.</p>
-                        </div>
-                        <a href="#" class="card-action-link" style="margin-top: 24px;">
-                            Read Article
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Article 2 -->
-                <div class="media-card tiktok reveal">
-                    <div class="media-info" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                        <div>
-                            <span class="card-tag" style="display: block; margin-bottom: 12px;">Scientific Article</span>
-                            <h4 style="font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 1.6rem;">Mapping Synthetic Genomes</h4>
-                            <p style="margin-top: 10px;">How CRISPR molecular machinery is paving the path for high-efficiency climate resilience crop models.</p>
-                        </div>
-                        <a href="#" class="card-action-link" style="margin-top: 24px;">
-                            Read Article
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Article 3 -->
-                <div class="media-card tiktok reveal">
-                    <div class="media-info" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
-                        <div>
-                            <span class="card-tag" style="display: block; margin-bottom: 12px;">Scientific Article</span>
-                            <h4 style="font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 1.6rem;">Fusion Energy Thresholds</h4>
-                            <p style="margin-top: 10px;">A detailed breakdown of recent plasma ignition parameters and what they mean for the planet's power grids.</p>
-                        </div>
-                        <a href="#" class="card-action-link" style="margin-top: 24px;">
-                            Read Article
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+        <div class="video-info">
+          <h3 style="font-family: inherit; font-size: 1.2rem; margin-bottom: 0.5rem;">Episode 01: Sub-zero Sensors</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Documenting instrumentation setups under arctic conditions.</p>
         </div>
-    </section>
-
-    <!-- NEWSLETTER SIGNUP -->
-    <section class="newsletter-section section-padding">
-        <div class="container">
-            <div class="newsletter-container reveal">
-                <h2>Join ScienceAiX Briefings</h2>
-                <p>Receive pristine deep-dives, new cinematic modules releases, and active mission logs directly to your inbox weekly.</p>
-                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to ScienceAiX!');">
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb">
+          <div class="play-icon">▶</div>
         </div>
-    </section>
-
-    <!-- SYSTEM FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="brand-logo">Science<span>AiX</span></a>
-                    <p>Merging premium scientific exploration with cinematic visual design.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 11.5a29 29 0 0 0 .46 5.08 2.78 2.78 0 0 0 1.95 1.96c1.71.46 8.59.46 8.59.46s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96 29 29 0 0 0 .46-5.08 29 29 0 0 0-.46-5.08z"></path><polygon points="9.75 15.02 15.5 11.5 9.75 7.98 9.75 15.02"></polygon></svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Knowledge Fields</h4>
-                    <ul>
-                        <li><a href="#">Cosmic Corridors</a></li>
-                        <li><a href="#">Quantum State Dynamics</a></li>
-                        <li><a href="#">Genomics Matrix</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Missions</h4>
-                    <ul>
-                        <li><a href="#">Project Artemis-X</a></li>
-                        <li><a href="#">Geothermal Vents</a></li>
-                        <li><a href="#">Atmospheric Sensors</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal & Search</h4>
-                    <ul>
-                        <li><a href="#">Sitemap</a></li>
-                        <li><a href="#">SEO Framework</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 ScienceAiX Global Platform. Built for cinematic learning.</p>
-                <p>Telemetry: Optimal</p>
-            </div>
+        <div class="video-info">
+          <h3 style="font-family: inherit; font-size: 1.2rem; margin-bottom: 0.5rem;">Episode 02: Synthetic Landscapes</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Simulating dynamic vegetation movements via terrain algorithms.</p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <!-- INTERACTIVE SCRIPT CONTROLLERS -->
-    <script>
-        // 1. Interactive Fluid Particle Background Engine
-        const canvas = document.getElementById('particle-canvas');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
+  <section class="section-padding" style="border-top: var(--border-color);">
+    <div class="mission-box">
+      <p>"To accurately archive the mechanisms of natural change through the pristine clarity of modern computer science."</p>
+      <div style="color: var(--accent-yellow); margin-top: 1.5rem; font-size: 0.85rem; letter-spacing: 0.1em; font-weight: 600; text-transform: uppercase;">ScienceAiX Declaration</div>
+    </div>
+  </section>
 
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+  <footer>
+    <div class="footer-links">
+      <a href="#">Data Index</a>
+      <a href="#">Repository Manifesto</a>
+      <a href="#">Privacy</a>
+    </div>
+    <p>&copy; 2026 ScienceAiX. Structural layouts live-hosted on GitHub Pages.</p>
+  </footer>
+
+  <script>
+    function filterTab(category) {
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-cat') === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
         }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 1.5 + 0.5;
-                this.speedX = Math.random() * 0.4 - 0.2;
-                this.speedY = Math.random() * 0.4 - 0.2;
-            }
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-                if (this.x > canvas.width) this.x = 0;
-                if (this.x < 0) this.x = canvas.width;
-                if (this.y > canvas.height) this.y = 0;
-                if (this.y < 0) this.y = canvas.height;
-            }
-            draw() {
-                ctx.fillStyle = 'rgba(0, 255, 102, 0.4)';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        function initParticles() {
-            particles = [];
-            for (let i = 0; i < 65; i++) {
-                particles.push(new Particle());
-            }
-        }
-        initParticles();
-
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => {
-                p.update();
-                p.draw();
-            });
-            requestAnimationFrame(animateParticles);
-        }
-        animateParticles();
-
-        // 2. High-Performance Intersection Observer for Reveal Animations
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, { threshold: 0.05, rootMargin: "0px 0px -50px 0px" });
-
-        revealElements.forEach(el => revealObserver.observe(el));
-
-        // 3. Client Side Dynamic Filter and Live Search Engine
-        const searchInput = document.getElementById('moduleSearch');
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const cards = document.querySelectorAll('.showcase-card');
-
-        function filterModules() {
-            const query = searchInput.value.toLowerCase();
-            const activeTab = document.querySelector('.tab-btn.active').getAttribute('data-filter');
-
-            cards.forEach(card => {
-                const title = card.querySelector('h3').textContent.toLowerCase();
-                const text = card.querySelector('p').textContent.toLowerCase();
-                const category = card.getAttribute('data-category');
-
-                const matchesSearch = title.includes(query) || text.includes(query);
-                const matchesTab = activeTab === 'all' || category === activeTab;
-
-                if (matchesSearch && matchesTab) {
-                    card.style.display = 'flex';
-                    setTimeout(() => card.style.opacity = '1', 50);
-                } else {
-                    card.style.opacity = '0';
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        searchInput.addEventListener('input', filterModules);
-
-        tabButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                tabButtons.forEach(t => t.classList.remove('active'));
-                btn.classList.add('active');
-                filterModules();
-            });
-        });
-    </script>
+      });
+    }
+  </script>
 </body>
 </html>

@@ -1,466 +1,691 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="kJb3UplN-YgyGD3USr87AZsQg6OJjBqgWnreEnPR4DI" />
-  <title>ScienceAiX | Discover the Future of Science</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="google-site-verification" content="kJb3UplN-YgyGD3USr87AZsQg6OJjBqgWnreEnPR4DI">    <meta name="description" content="ScienceAiX explores artificial intelligence, science, technology, and discoveries shaping the future of humanity.">    <meta name="keywords" content="ScienceAiX, Artificial Intelligence, Science, Technology, Innovation, Research">    <meta name="author" content="ScienceAiX">    <title>ScienceAiX | Discover the Future of Science</title>    <!-- Google Fonts -->    <link rel="preconnect" href="https://fonts.googleapis.com">  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">  <style>  
   
-  <style>
-    :root {
-      --bg-primary: #0a0a0c;
-      --bg-secondary: #121216;
-      --accent-yellow: #f5c518;
-      --text-main: #f5f5f7;
-      --text-muted: #86868b;
-      --border-color: rgba(255, 255, 255, 0.08);
-      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+:root {  
+  --bg-primary: #0a0a0c;  
+  --bg-secondary: #121216;  
+  --accent-yellow: #f5c518;  
+  --text-main: #f5f5f7;  
+  --text-muted: #86868b;  
+  --border-color: rgba(255,255,255,0.08);  
+  --transition: all 0.4s cubic-bezier(0.16,1,0.3,1);  
+}  
+  
+  
+* {  
+  box-sizing:border-box;  
+  margin:0;  
+  padding:0;  
+}  
+  
+  
+html {  
+  scroll-behavior:smooth;  
+}  
+  
+  
+body {  
+  background:var(--bg-primary);  
+  color:var(--text-main);  
+  font-family:'Inter', sans-serif;  
+  line-height:1.6;  
+  overflow-x:hidden;  
+  -webkit-font-smoothing:antialiased;  
+}  
+  
+  
+h1,  
+h2,  
+h3 {  
+  font-family:'Playfair Display', serif;  
+  font-weight:600;  
+  letter-spacing:-0.02em;  
+}  
+  
+  
+.section-title {  
+  font-size:2.5rem;  
+  text-align:center;  
+  margin-bottom:3rem;  
+}  
+  
+  
+.section-title::after {  
+  content:"";  
+  display:block;  
+  width:40px;  
+  height:3px;  
+  background:var(--accent-yellow);  
+  margin:0.75rem auto 0;  
+}  
+  
+  
+nav {  
+  
+  position:fixed;  
+  top:0;  
+  width:100%;  
+  z-index:1000;  
+  
+  background:rgba(10,10,12,0.7);  
+  
+  backdrop-filter:blur(20px);  
+  -webkit-backdrop-filter:blur(20px);  
+  
+  border-bottom:1px solid var(--border-color);  
+  
+  padding:1rem 2rem;  
+  
+  display:flex;  
+  justify-content:space-between;  
+  align-items:center;  
+  
+}  
+  
+  
+.logo {  
+  
+  font-size:1.25rem;  
+  font-weight:700;  
+  text-decoration:none;  
+  color:var(--text-main);  
+  
+}  
+  
+  
+.logo span {  
+  
+  border-left:4px solid var(--accent-yellow);  
+  padding-left:8px;  
+  
+}  
+  
+  
+.hero {  
+  
+  height:100vh;  
+  
+  display:flex;  
+  flex-direction:column;  
+  justify-content:center;  
+  align-items:center;  
+  
+  text-align:center;  
+  
+  padding:0 1.5rem;  
+  
+  background:  
+  radial-gradient(circle at center,  
+  rgba(20,20,25,0.8) 0%,  
+  var(--bg-primary) 100%);  
+  
+}  
+  
+  
+.hero-badge {  
+  
+  font-size:0.85rem;  
+  
+  text-transform:uppercase;  
+  
+  letter-spacing:0.2em;  
+  
+  color:var(--accent-yellow);  
+  
+  margin-bottom:1.5rem;  
+  
+  font-weight:600;  
+  
+}  
+  
+  
+.hero h1 {  
+  
+  font-size:3.5rem;  
+  
+  max-width:800px;  
+  
+  margin-bottom:1.5rem;  
+  
+  line-height:1.15;  
+  
+}  
+  
+  
+@media(min-width:768px){  
+  
+.hero h1{  
+font-size:5rem;  
+}  
+  
+}  
+  
+  
+.hero p {  
+  
+color:var(--text-muted);  
+  
+font-size:1.15rem;  
+  
+max-width:600px;  
+  
+margin-bottom:2.5rem;  
+  
+font-weight:300;  
+  
+}  
+  
+  
+.btn {  
+  
+display:inline-block;  
+  
+padding:0.8rem 2rem;  
+  
+background:var(--text-main);  
+  
+color:var(--bg-primary);  
+  
+text-decoration:none;  
+  
+border-radius:30px;  
+  
+font-weight:500;  
+  
+transition:var(--transition);  
+  
+}  
+  
+  
+.btn:hover {  
+  
+transform:translateY(-2px);  
+  
+box-shadow:0 10px 20px rgba(255,255,255,0.1);  
+  
+}  
+  
+  
+.section-padding {  
+  
+padding:8rem 1.5rem;  
+  
+max-width:1200px;  
+  
+margin:auto;  
+  
+}  
+.about-grid {  
+  
+display:grid;  
+  
+grid-template-columns:1fr;  
+  
+gap:3rem;  
+  
+align-items:center;  
+  
+}  
+  
+  
+@media(min-width:768px){  
+  
+.about-grid{  
+  
+grid-template-columns:1fr 1fr;  
+  
+}  
+  
+}  
+  
+  
+.about-text p {  
+  
+color:var(--text-muted);  
+  
+margin-bottom:1.5rem;  
+  
+font-size:1.1rem;  
+  
+}  
+  
+  
+.img-placeholder {  
+  
+background:var(--bg-secondary);  
+  
+border:1px solid var(--border-color);  
+  
+aspect-ratio:16/10;  
+  
+border-radius:16px;  
+  
+display:flex;  
+  
+align-items:center;  
+  
+justify-content:center;  
+  
+color:var(--text-muted);  
+  
+position:relative;  
+  
+overflow:hidden;  
+  
+}  
+  
+  
+.tabs {
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+display:flex;
 
-    body {
-      background-color: var(--bg-primary);
-      color: var(--text-main);
-      font-family: 'Inter', -apple-system, sans-serif;
-      overflow-x: hidden;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
+justify-content:center;
 
-    h1, h2, h3 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
+gap:1rem;
 
-    .section-title {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 3rem;
-      position: relative;
-    }
-    
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 3px;
-      background: var(--accent-yellow);
-      margin: 0.75rem auto 0;
-    }
+margin-bottom:3rem;
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(10, 10, 12, 0.7);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: var(--border-color);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+flex-wrap:wrap;
 
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-decoration: none;
-      color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .logo span {
-      border-left: 4px solid var(--accent-yellow);
-      padding-left: 8px;
-    }
-
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 1.5rem;
-      background: radial-gradient(circle at center, rgba(20, 20, 25, 0.8) 0%, var(--bg-primary) 100%);
-      position: relative;
-    }
-
-    .hero-badge {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--accent-yellow);
-      margin-bottom: 1.5rem;
-      font-weight: 600;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      max-width: 800px;
-      margin-bottom: 1.5rem;
-      line-height: 1.15;
-    }
-
-    @media (min-width: 768px) {
-      .hero h1 { font-size: 5rem; }
-    }
-
-    .hero p {
-      color: var(--text-muted);
-      font-size: 1.15rem;
-      max-width: 600px;
-      margin-bottom: 2.5rem;
-      font-weight: 300;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.8rem 2rem;
-      background: var(--text-main);
-      color: var(--bg-primary);
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: var(--transition);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(255,255,255,0.1);
-    }
-
-    .section-padding {
-      padding: 8rem 1.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    @media (min-width: 768px) {
-      .about-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    .about-text p {
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-      font-size: 1.1rem;
-    }
-
-    .img-placeholder {
-      background: var(--bg-secondary);
-      border: var(--border-color);
-      aspect-ratio: 16/10;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .img-placeholder::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(45deg, rgba(245,197,24,0.03) 0%, transparent 100%);
-    }
-
-    .tabs {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 3rem;
-    }
-
-    .tab-btn {
-      background: none;
-      border: none;
-      color: var(--text-muted);
-      font-size: 1rem;
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-      transition: var(--transition);
-      font-family: inherit;
-    }
-
-    .tab-btn.active {
-      color: var(--text-main);
-      border-bottom: 2px solid var(--accent-yellow);
-    }
-
-    .library-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background: var(--bg-secondary);
-      border: var(--border-color);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: var(--transition);
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(245,197,24,0.3);
-    }
-
-    .card-tag {
-      color: var(--accent-yellow);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-
-    .card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 2rem;
-    }
-
-    .video-card {
-      background: var(--bg-secondary);
-      border-radius: 16px;
-      overflow: hidden;
-      border: var(--border-color);
-    }
-
-    .video-thumb {
-      aspect-ratio: 16/9;
-      background: #1c1c22;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      position: relative;
-    }
-
-    .play-icon {
-      width: 50px;
-      height: 50px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(5px);
-      transition: var(--transition);
-    }
-
-    .video-card:hover .play-icon {
-      background: var(--accent-yellow);
-      color: var(--bg-primary);
-      transform: scale(1.1);
-    }
-
-    .video-info {
-      padding: 1.5rem;
-    }
-
-    .mission-box {
-      background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-      border: var(--border-color);
-      padding: 4rem 2rem;
-      border-radius: 24px;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .mission-box p {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.75rem;
-      font-style: italic;
-      line-height: 1.4;
-    }
-
-    footer {
-      border-top: var(--border-color);
-      padding: 4rem 2rem;
-      text-align: center;
-      background: var(--bg-secondary);
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: var(--transition);
-    }
-
-    .footer-links a:hover {
-      color: var(--accent-yellow);
-    }
-
-    footer p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-  </style>
-</head>
-<body>
-
-  <nav>
-    <a href="#" class="logo"><span>ScienceAiX</span></a>
-    <a href="#library" class="btn" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Explore</a>
-  </nav>
-
-  <header class="hero">
-    <div class="hero-badge">The Frontier of Understanding</div>
-    <h1>Where Advanced Intelligence Meets Global Discovery.</h1>
-    <p>We are mapping the unknown—uniting technical research datasets with beautiful media storytelling to document our evolving universe.</p>
-    <a href="#about" class="btn">Read the Launch Edition</a>
-  </header>
-
-  <section id="about" class="section-padding">
-    <div class="about-grid">
-      <div class="about-text">
-        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">A Modular View of Our Planet's Systems</h2>
-        <p>ScienceAiX serves as an open-access container for collaborative study files, research essays, and rich data collections.</p>
-        <p>Our goal is simplicity: beautiful code interfaces presenting unfiltered planetary insights to researchers and curious minds worldwide.</p>
-      </div>
-      <div class="img-placeholder">
-        [ Visual Asset Awaiting Upload ]
-      </div>
-    </div>
-  </section>
-
-  <section id="library" style="background-color: var(--bg-secondary);">
-    <div class="section-padding">
-      <h2 class="section-title">Knowledge Library</h2>
-      
-      <div class="tabs">
-        <button class="tab-btn active" onclick="filterTab('all', this)">All Briefs</button>
-        <button class="tab-btn" onclick="filterTab('ai', this)">Artificial Intelligence</button>
-        <button class="tab-btn" onclick="filterTab('earth', this)">Earth Systems</button>
-      <div class="library-grid">
-
-        <a href="pages/article-001.html" class="card-link-wrapper" style="text-decoration: none; color: inherit; display: block;">
-    <div class="card" data-cat="ai">
-      <div class="card-tag">Research Brief</div>
-      <h3>What Is Artificial Intelligence? A Complete Beginner's Guide</h3>
-<p>Discover what Artificial Intelligence is, how it works, its history, real-world applications, benefits, risks, and why it is shaping the future of humanity.</p>
-    </div>
-  </a>
-        <div class="card" data-cat="earth">
-          <div class="card-tag">Expedition Dispatch</div>
-          <h3>Deep Ocean Chemical Baseline Studies</h3>
-          <p>A closer editorial review of hydrothermal activity recordings gathered along the oceanic trench networks.</p>
-        </div>
-        <div class="card" data-cat="ai">
-          <div class="card-tag">Systems</div>
-          <h3>Predictive Models for Planetary Ecosystems</h3>
-          <p>Using neural network weights to anticipate biospheric stress indices before they reach critical collapse thresholds.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-padding">
-    <h2 class="section-title">Field Documentaries</h2>
-    <div class="video-grid">
-      <div class="video-card">
-        <div class="video-thumb">
-          <div class="play-icon">▶</div>
-        </div>
-        <div class="video-info">
-          <h3 style="font-family: inherit; font-size: 1.2rem; margin-bottom: 0.5rem;">Episode 01: Sub-zero Sensors</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem;">Documenting instrumentation setups under arctic conditions.</p>
-        </div>
-      </div>
-      <div class="video-card">
-        <div class="video-thumb">
-          <div class="play-icon">▶</div>
-        </div>
-        <div class="video-info">
-          <h3 style="font-family: inherit; font-size: 1.2rem; margin-bottom: 0.5rem;">Episode 02: Synthetic Landscapes</h3>
-          <p style="color: var(--text-muted); font-size: 0.9rem;">Simulating dynamic vegetation movements via terrain algorithms.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-padding" style="border-top: var(--border-color);">
-    <div class="mission-box">
-      <p>"To accurately archive the mechanisms of natural change through the pristine clarity of modern computer science."</p>
-      <div style="color: var(--accent-yellow); margin-top: 1.5rem; font-size: 0.85rem; letter-spacing: 0.1em; font-weight: 600; text-transform: uppercase;">ScienceAiX Declaration</div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-links">
-      <a href="#">Data Index</a>
-      <a href="#">Repository Manifesto</a>
-      <a href="#">Privacy</a>
-    </div>
-    <p>&copy; 2026 ScienceAiX. Structural layouts live-hosted on GitHub Pages.</p>
-  </footer>
-
-  <script>
-  function filterTab(category, button) {
-  const buttons = document.querySelectorAll('.tab-btn');
-  buttons.forEach(btn => btn.classList.remove('active'));
-
-  if (button) {
-    button.classList.add('active');
-  }
-
-  const cards = document.querySelectorAll('.card');
-
-  cards.forEach(card => {
-    if (category === 'all' || card.getAttribute('data-cat') === category) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
-  });
 }
-  </script>
-</body>
-</html>
+  
+  
+.tab-btn {  
+  
+background:none;  
+  
+border:none;  
+  
+color:var(--text-muted);  
+  
+font-size:1rem;  
+  
+cursor:pointer;  
+  
+padding:0.5rem 1rem;  
+  
+transition:var(--transition);  
+  
+font-family:inherit;  
+  
+}  
+  
+  
+.tab-btn.active {  
+  
+color:var(--text-main);  
+  
+border-bottom:2px solid var(--accent-yellow);  
+  
+}  
+  
+  
+.library-grid {  
+  
+display:grid;  
+  
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));  
+  
+gap:2rem;  
+  
+}  
+  
+  
+.card {  
+  
+background:var(--bg-secondary);  
+  
+border:1px solid var(--border-color);  
+  
+border-radius:16px;  
+  
+padding:2rem;  
+  
+transition:var(--transition);  
+  
+}  
+  
+  
+.card:hover {  
+  
+transform:translateY(-4px);  
+  
+border-color:rgba(245,197,24,0.3);  
+  
+}  
+  
+  
+.card-tag {  
+  
+color:var(--accent-yellow);  
+  
+font-size:0.75rem;  
+  
+text-transform:uppercase;  
+  
+letter-spacing:0.1em;  
+  
+font-weight:600;  
+  
+margin-bottom:0.75rem;  
+  
+}  
+  
+  
+.card h3 {  
+  
+font-size:1.5rem;  
+  
+margin-bottom:1rem;  
+  
+}  
+  
+  
+.card p {  
+  
+color:var(--text-muted);  
+  
+font-size:0.95rem;  
+  
+}  
+  
+  
+.video-grid {  
+  
+display:grid;  
+  
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));  
+  
+gap:2rem;  
+  
+}  
+  
+  
+.video-card {  
+  
+background:var(--bg-secondary);  
+  
+border-radius:16px;  
+  
+overflow:hidden;  
+  
+border:1px solid var(--border-color);  
+  
+}  
+  
+  
+.video-thumb {  
+  
+aspect-ratio:16/9;  
+  
+background:#1c1c22;  
+  
+display:flex;  
+  
+align-items:center;  
+  
+justify-content:center;  
+  
+}  
+  
+  
+.play-icon {  
+  
+width:50px;  
+  
+height:50px;  
+  
+background:rgba(255,255,255,0.1);  
+  
+border-radius:50%;  
+  
+display:flex;  
+  
+align-items:center;  
+  
+justify-content:center;  
+  
+transition:var(--transition);  
+  
+}  
+  
+  
+.video-card:hover .play-icon {  
+  
+background:var(--accent-yellow);  
+  
+color:var(--bg-primary);  
+  
+transform:scale(1.1);  
+  
+}  
+  
+  
+.video-info {  
+  
+padding:1.5rem;  
+  
+}  
+  
+  
+.mission-box {  
+  
+background:linear-gradient(  
+180deg,  
+var(--bg-secondary),  
+var(--bg-primary)  
+);  
+  
+border:1px solid var(--border-color);  
+  
+padding:4rem 2rem;  
+  
+border-radius:24px;  
+  
+text-align:center;  
+  
+max-width:800px;  
+  
+margin:auto;  
+  
+}  
+  
+  
+.mission-box p {  
+  
+font-family:'Playfair Display',serif;  
+  
+font-size:1.75rem;  
+  
+font-style:italic;  
+  
+line-height:1.4;  
+  
+}  
+  
+  
+footer {  
+  
+border-top:1px solid var(--border-color);  
+  
+padding:4rem 2rem;  
+  
+text-align:center;  
+  
+background:var(--bg-secondary);  
+  
+}  
+  
+  
+.footer-links {  
+  
+display:flex;  
+  
+justify-content:center;  
+  
+gap:2rem;  
+  
+margin-bottom:2rem;  
+  
+}  
+  
+  
+.footer-links a {  
+  
+color:var(--text-muted);  
+  
+text-decoration:none;  
+  
+transition:var(--transition);  
+  
+}  
+  
+  
+.footer-links a:hover {  
+  
+color:var(--accent-yellow);  
+  
+}  
+  
+  
+footer p {  
+  
+font-size:0.85rem;  
+  
+color:var(--text-muted);  
+  
+}  
+  
+</style>  </head>  <body>  <nav>  <a href="#" class="logo">  
+<span>ScienceAiX</span>  
+</a>  <a href="#library" class="btn" style="padding:0.5rem 1.2rem;font-size:0.85rem;">  
+Explore  
+</a>  </nav>  <header class="hero">  <div class="hero-badge">  
+The Frontier of Understanding  
+</div>  <h1>  
+Where Advanced Intelligence Meets Global Discovery.  
+</h1>  <p>  
+We are mapping the unknown—uniting technical research datasets with beautiful media storytelling to document our evolving universe.  
+</p>  <a href="#about" class="btn">  
+Read the Launch Edition  
+</a>  </header>  <section id="about" class="section-padding">  <div class="about-grid">  <div class="about-text">  <h2 style="font-size:2.5rem;margin-bottom:1.5rem;">  
+A Modular View of Our Planet's Systems  
+</h2>  <p>  
+ScienceAiX serves as an open-access platform for collaborative study files, research essays, and rich data collections.  
+</p>  <p>  
+Our goal is simplicity: presenting scientific knowledge, artificial intelligence, and planetary insights to researchers and curious minds worldwide.  
+</p>  </div>  <div class="img-placeholder">  [ Visual Asset Awaiting Upload ]
+
+</div>  </div>  </section>  <section id="library" style="background-color:var(--bg-secondary);">  <div class="section-padding">  <h2 class="section-title">  
+Knowledge Library  
+</h2>  <div class="tabs">  <button class="tab-btn active" onclick="filterTab('all',this)">  
+All Briefs  
+</button>  <button class="tab-btn" onclick="filterTab('ai',this)">  
+Artificial Intelligence  
+</button>  <button class="tab-btn" onclick="filterTab('earth',this)">  
+Earth Systems  
+</button>  </div>  <div class="library-grid">  <a href="pages/article-001.html" class="card-link-wrapper" style="text-decoration:none;color:inherit;">  <div class="card" data-cat="ai">  <div class="card-tag">  
+Research Brief  
+</div>  <h3>  
+What Is Artificial Intelligence? A Complete Beginner's Guide  
+</h3>  <p>  
+Discover what Artificial Intelligence is, how it works, its history, real-world applications, benefits, risks, and why it is shaping the future of humanity.  
+</p>  </div>  </a>  <div class="card" data-cat="earth">  <div class="card-tag">  
+Expedition Dispatch  
+</div>  <h3>  
+Deep Ocean Chemical Baseline Studies  
+</h3>  <p>  
+A closer editorial review of hydrothermal activity recordings gathered along oceanic trench networks.  
+</p>  </div>  <div class="card" data-cat="ai">  <div class="card-tag">  
+Systems  
+</div>  <h3>  
+Predictive Models for Planetary Ecosystems  
+</h3>  <p>  
+Using neural network models to anticipate biospheric stress indicators before critical thresholds are reached.  
+</p>  </div>  </div>  </div>  </section>  
+<section class="section-padding">  <h2 class="section-title">  
+Field Documentaries  
+</h2>  <div class="video-grid">  <div class="video-card">  <div class="video-thumb">  <div class="play-icon">  
+▶  
+</div>  </div>  <div class="video-info">  <h3 style="font-family:inherit;font-size:1.2rem;margin-bottom:0.5rem;">  
+Episode 01: Sub-zero Sensors  
+</h3>  <p style="color:var(--text-muted);font-size:0.9rem;">  
+Documenting instrumentation setups under arctic conditions.  
+</p>  </div>  </div>  <div class="video-card">  <div class="video-thumb">  <div class="play-icon">  
+▶  
+</div>  </div>  <div class="video-info">  <h3 style="font-family:inherit;font-size:1.2rem;margin-bottom:0.5rem;">  
+Episode 02: Synthetic Landscapes  
+</h3>  <p style="color:var(--text-muted);font-size:0.9rem;">  
+Simulating dynamic vegetation movements via terrain algorithms.  
+</p>  </div>  </div>  </div>  </section>  <section class="section-padding" style="border-top:1px solid var(--border-color);">  <div class="mission-box">  <p>  
+"To accurately archive the mechanisms of natural change through the pristine clarity of modern computer science."  
+</p>  <div style="color:var(--accent-yellow);margin-top:1.5rem;font-size:0.85rem;letter-spacing:0.1em;font-weight:600;text-transform:uppercase;">  ScienceAiX Declaration
+
+</div>  </div>  </section>  <footer>  <div class="footer-links">  <a href="#">  
+Data Index  
+</a>  <a href="#">  
+Repository Manifesto  
+</a>  <a href="#">  
+Privacy  
+</a>  </div>  <p>  
+&copy; 2026 ScienceAiX. Structural layouts live-hosted on GitHub Pages.  
+</p>  </footer>  <script>  
+  
+  
+function filterTab(category, button) {  
+  
+  
+const buttons = document.querySelectorAll('.tab-btn');  
+  
+  
+buttons.forEach(btn => {  
+  
+btn.classList.remove('active');  
+  
+});  
+  
+  
+  
+if(button){  
+  
+button.classList.add('active');  
+  
+}  
+  
+  
+  
+const cards = document.querySelectorAll('.card');  
+  
+  
+  
+cards.forEach(card => {  
+  
+  
+if(category === 'all' || card.getAttribute('data-cat') === category){  
+  
+  
+card.style.display = 'block';  
+  
+  
+}  
+  
+  
+else{  
+  
+  
+card.style.display = 'none';  
+  
+  
+}  
+  
+  
+});  
+  
+  
+}  
+  
+  
+</script>  </body>  </html>

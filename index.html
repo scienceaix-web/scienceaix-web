@@ -376,9 +376,9 @@
       <h2 class="section-title">Knowledge Library</h2>
       
       <div class="tabs">
-        <button class="tab-btn active" onclick="filterTab('all')">All Briefs</button>
-        <button class="tab-btn" onclick="filterTab('ai')">Artificial Intelligence</button>
-        <button class="tab-btn" onclick="filterTab('earth')">Earth Systems</button>
+        <button class="tab-btn active" onclick="filterTab('all', this)">All Briefs</button>
+        <button class="tab-btn" onclick="filterTab('ai', this)">Artificial Intelligence</button>
+        <button class="tab-btn" onclick="filterTab('earth', this)">Earth Systems</button>
       </div>
 
         <a href="pages/article-001.html" class="card-link-wrapper" style="text-decoration: none; color: inherit; display: block;">
@@ -443,20 +443,24 @@
   </footer>
 
   <script>
-    function filterTab(category) {
-      const buttons = document.querySelectorAll('.tab-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
+  function filterTab(category, button) {
+  const buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
 
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-cat') === category) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+  if (button) {
+    button.classList.add('active');
+  }
+
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    if (category === 'all' || card.getAttribute('data-cat') === category) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
     }
+  });
+}
   </script>
 </body>
 </html>

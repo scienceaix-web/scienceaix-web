@@ -1011,3 +1011,11 @@ img {
 .read-next a {
     text-decoration: none;
 }
+.article-hero-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 20px;
+}

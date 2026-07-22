@@ -954,3 +954,60 @@ img {
     color:#ffffff;
 
 }
+
+/* ==============================
+   SCIENCEAIX PREMIUM ARTICLE UPGRADE
+   ============================== */
+
+.article-info {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.info-box {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: var(--bg-secondary);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.info-box p {
+    margin: 0.5rem 0;
+}
+
+
+.science-visual {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.visual-placeholder {
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    background: var(--bg-secondary);
+    border: 1px dashed rgba(255,255,255,0.2);
+}
+
+
+.related-articles,
+.read-next {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 16px;
+    background: var(--bg-secondary);
+}
+
+
+.related-articles ul {
+    padding-left: 1.2rem;
+}
+
+
+.related-articles a,
+.read-next a {
+    text-decoration: none;
+}

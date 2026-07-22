@@ -1,0 +1,6599 @@
+/* ==========================================================
+   ScienceAiX Premium Stylesheet v2
+   Version: 2.0
+   ========================================================== */
+
+/* ---------- CSS VARIABLES ---------- */
+
+:root{
+
+--science-green:#00d084;
+--science-green-light:#4cffb0;
+
+--bg:#07120f;
+--bg-secondary:#0d1b16;
+
+--surface:#13241d;
+
+--text:#f4f7f5;
+--text-muted:#a8b5af;
+
+--border:rgba(255,255,255,.08);
+
+--radius:18px;
+
+--shadow:
+0 20px 50px rgba(0,0,0,.35);
+
+--transition:.35s ease;
+
+}
+
+/* ---------- RESET ---------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:
+Inter,
+Segoe UI,
+Roboto,
+Arial,
+sans-serif;
+
+background:var(--bg);
+
+color:var(--text);
+
+line-height:1.8;
+
+overflow-x:hidden;
+
+}
+
+img{
+
+display:block;
+
+max-width:100%;
+
+height:auto;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+.container{
+
+width:min(1200px,92%);
+
+margin:auto;
+
+}
+/* ==========================================================
+   TYPOGRAPHY
+   ========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+font-weight:800;
+
+line-height:1.2;
+
+letter-spacing:-0.02em;
+
+margin-bottom:1rem;
+
+color:var(--text);
+
+}
+
+h1{
+
+font-size:clamp(2.5rem,6vw,4.8rem);
+
+}
+
+h2{
+
+font-size:clamp(2rem,5vw,3rem);
+
+}
+
+h3{
+
+font-size:1.6rem;
+
+}
+
+p{
+
+font-size:1.05rem;
+
+color:var(--text-muted);
+
+margin-bottom:1.4rem;
+
+}
+
+strong{
+
+color:var(--text);
+
+font-weight:700;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:1rem;
+
+}
+
+.section-title::after{
+
+content:"";
+
+display:block;
+
+width:70px;
+
+height:4px;
+
+margin:18px auto 0;
+
+background:var(--science-green);
+
+border-radius:999px;
+
+}
+
+.section-subtitle{
+
+max-width:760px;
+
+margin:0 auto 3rem;
+
+text-align:center;
+
+color:var(--text-muted);
+
+}
+/* ==========================================================
+   PREMIUM NAVIGATION
+   ========================================================== */
+
+.navbar{
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+background:rgba(7,18,15,.92);
+
+backdrop-filter:blur(16px);
+
+border-bottom:1px solid var(--border);
+
+}
+
+.nav-container{
+
+width:min(1200px,92%);
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:18px 0;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:1.6rem;
+
+font-weight:900;
+
+color:var(--science-green);
+
+letter-spacing:.5px;
+
+}
+
+.logo span{
+
+color:var(--science-green);
+
+}
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:12px 24px;
+
+border-radius:999px;
+
+background:var(--science-green);
+
+color:#07120f;
+
+font-weight:700;
+
+transition:var(--transition);
+
+cursor:pointer;
+
+border:none;
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 30px rgba(0,208,132,.35);
+
+background:var(--science-green-light);
+
+}
+
+.navbar a{
+
+transition:var(--transition);
+
+}
+
+.navbar a:hover{
+
+color:var(--science-green);
+
+}
+/* ==========================================================
+   HERO SECTION
+   ========================================================== */
+
+.hero{
+
+min-height:85vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:100px 20px;
+
+position:relative;
+
+overflow:hidden;
+
+background:
+radial-gradient(circle at top,
+rgba(0,208,132,.12),
+transparent 45%),
+linear-gradient(180deg,
+#07120f,
+#050b09);
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+top:-180px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:550px;
+
+height:550px;
+
+background:rgba(0,208,132,.10);
+
+filter:blur(100px);
+
+border-radius:50%;
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+max-width:850px;
+
+}
+
+.hero-badge{
+
+display:inline-block;
+
+padding:8px 18px;
+
+margin-bottom:25px;
+
+border-radius:999px;
+
+background:rgba(0,208,132,.10);
+
+border:1px solid rgba(0,208,132,.30);
+
+color:var(--science-green);
+
+font-size:.85rem;
+
+font-weight:700;
+
+}
+
+.hero h1{
+
+margin-bottom:24px;
+
+}
+
+.hero h1 span{
+
+color:var(--science-green);
+
+}
+
+.hero p{
+
+max-width:720px;
+
+margin:0 auto 2rem;
+
+font-size:1.15rem;
+
+}
+
+.hero-content{
+
+animation:heroFade 1s ease;
+
+}
+
+@keyframes heroFade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/* ==========================================================
+   KNOWLEDGE LIBRARY
+========================================================== */
+
+.section-padding{
+
+padding:90px 0;
+
+}
+
+.library-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+align-items:stretch;
+
+}
+
+/* ==========================================================
+   PREMIUM CARDS
+========================================================== */
+
+.card{
+
+background:linear-gradient(
+145deg,
+#112019,
+#0b1612
+);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:30px;
+
+transition:var(--transition);
+
+position:relative;
+
+overflow:hidden;
+
+height:100%;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:3px;
+
+background:var(--science-green);
+
+transform:scaleX(0);
+
+transition:var(--transition);
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow);
+
+border-color:rgba(0,208,132,.35);
+
+}
+
+.card:hover::before{
+
+transform:scaleX(1);
+
+}
+
+.card-tag{
+
+display:inline-block;
+
+padding:6px 14px;
+
+margin-bottom:18px;
+
+border-radius:999px;
+
+background:rgba(0,208,132,.10);
+
+color:var(--science-green);
+
+font-size:.82rem;
+
+font-weight:700;
+
+}
+
+.card h3{
+
+margin-bottom:16px;
+
+}
+
+.card p{
+
+margin-bottom:20px;
+
+}
+
+.card-link-wrapper{
+
+display:block;
+
+height:100%;
+
+color:inherit;
+
+}
+/* ==========================================================
+   PREMIUM ARTICLE PAGES
+========================================================== */
+
+.article-page{
+
+background:
+radial-gradient(circle at top,
+rgba(0,208,132,.08),
+transparent 35%),
+var(--bg);
+
+}
+
+.article-container{
+
+width:min(900px,92%);
+
+margin:60px auto;
+
+padding:50px;
+
+background:linear-gradient(
+145deg,
+rgba(18,32,26,.96),
+rgba(10,18,15,.96)
+);
+
+border:1px solid var(--border);
+
+border-radius:24px;
+
+box-shadow:var(--shadow);
+
+}
+
+.article-container h1{
+
+margin-bottom:25px;
+
+}
+
+.article-container h2{
+
+margin-top:45px;
+
+margin-bottom:18px;
+
+color:var(--science-green);
+
+}
+
+.article-container h3{
+
+margin-top:30px;
+
+margin-bottom:12px;
+
+}
+
+.article-container p{
+
+margin-bottom:22px;
+
+}
+
+.article-container ul,
+.article-container ol{
+
+margin:20px 0 25px 24px;
+
+}
+
+.article-container li{
+
+margin-bottom:12px;
+
+color:var(--text-muted);
+
+}
+
+.article-container strong{
+
+color:var(--science-green);
+
+}
+
+blockquote,
+.quote{
+
+margin:35px 0;
+
+padding:25px;
+
+border-left:4px solid var(--science-green);
+
+background:rgba(0,208,132,.08);
+
+border-radius:12px;
+
+font-style:italic;
+
+color:#fff;
+
+}
+
+.article-back{
+
+width:min(900px,92%);
+
+margin:30px auto 0;
+
+}
+
+.article-back a{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+font-weight:700;
+
+color:var(--science-green);
+
+transition:var(--transition);
+
+}
+
+.article-back a:hover{
+
+transform:translateX(-5px);
+
+}
+/* ==========================================================
+   ARTICLE COMPONENTS
+========================================================== */
+
+/* Editorial Information */
+
+.article-info{
+
+max-width:900px;
+
+margin:2rem auto;
+
+padding:0 1.5rem;
+
+}
+
+.info-box{
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:24px;
+
+}
+
+.info-box p{
+
+margin-bottom:.8rem;
+
+}
+
+/* Hero Image */
+
+.article-hero-image{
+
+display:block;
+
+width:100%;
+
+max-width:900px;
+
+height:auto;
+
+margin:2rem auto;
+
+border-radius:20px;
+
+box-shadow:var(--shadow);
+
+}
+
+/* Science Visual */
+
+.science-visual{
+
+max-width:900px;
+
+margin:3rem auto;
+
+padding:0 1.5rem;
+
+}
+
+/* Related Articles */
+
+.related-articles,
+
+.read-next{
+
+margin:3rem auto;
+
+padding:2rem;
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+}
+
+.related-articles h2,
+
+.read-next h2{
+
+margin-bottom:1rem;
+
+color:var(--science-green);
+
+}
+
+.related-articles ul{
+
+list-style:disc;
+
+padding-left:1.5rem;
+
+}
+
+.related-articles li{
+
+margin-bottom:12px;
+
+}
+
+.related-articles a,
+
+.read-next a{
+
+color:var(--science-green);
+
+font-weight:600;
+
+transition:var(--transition);
+
+}
+
+.related-articles a:hover,
+
+.read-next a:hover{
+
+opacity:.85;
+
+}
+
+/* Previous / Next Navigation */
+
+.article-navigation{
+
+display:flex;
+
+justify-content:space-between;
+
+gap:20px;
+
+margin:4rem auto;
+
+max-width:900px;
+
+}
+
+.article-navigation a{
+
+flex:1;
+
+padding:18px;
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+background:var(--surface);
+
+transition:var(--transition);
+
+font-weight:700;
+
+}
+
+.article-navigation a:hover{
+
+transform:translateY(-4px);
+
+border-color:var(--science-green);
+
+box-shadow:var(--shadow);
+
+}
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer{
+
+margin-top:80px;
+
+padding:60px 20px;
+
+background:#050b09;
+
+border-top:1px solid var(--border);
+
+text-align:center;
+
+}
+
+.footer p{
+
+margin:0;
+
+color:var(--text-muted);
+
+font-size:.95rem;
+
+}
+
+.footer span{
+
+color:var(--science-green);
+
+font-weight:700;
+
+}
+
+/* ==========================================================
+   UTILITIES
+========================================================== */
+
+.text-center{
+
+text-align:center;
+
+}
+
+.glow{
+
+box-shadow:
+0 0 30px rgba(0,208,132,.25);
+
+}
+
+.fade-in{
+
+animation:fadeIn .8s ease forwards;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/* ==========================================================
+   ARTICLE CONTENT SYSTEM
+   Designed for scalable scientific publishing
+========================================================== */
+
+.article-content{
+
+max-width:900px;
+
+margin:0 auto;
+
+padding:40px 20px;
+
+line-height:1.8;
+
+color:var(--text-primary);
+
+}
+
+
+/* Article headings */
+
+.article-content h1{
+
+font-size:clamp(2rem,5vw,3.5rem);
+
+line-height:1.15;
+
+margin-bottom:25px;
+
+font-weight:800;
+
+letter-spacing:-0.03em;
+
+}
+
+
+.article-content h2{
+
+font-size:clamp(1.5rem,3vw,2.2rem);
+
+margin-top:60px;
+
+margin-bottom:20px;
+
+color:var(--science-green);
+
+font-weight:700;
+
+}
+
+
+.article-content h3{
+
+font-size:1.3rem;
+
+margin-top:40px;
+
+margin-bottom:15px;
+
+font-weight:700;
+
+}
+
+
+/* Paragraph system */
+
+.article-content p{
+
+font-size:1.05rem;
+
+margin-bottom:25px;
+
+color:var(--text-secondary);
+
+}
+
+
+/* Scientific emphasis */
+
+.article-content strong{
+
+color:var(--text-primary);
+
+font-weight:700;
+
+}
+
+
+/* Links inside articles */
+
+.article-content a{
+
+color:var(--science-green);
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s ease;
+
+}
+
+
+.article-content a:hover{
+
+text-decoration:underline;
+
+}
+
+
+/* Article lists */
+
+.article-content ul,
+.article-content ol{
+
+margin:25px 0;
+
+padding-left:35px;
+
+color:var(--text-secondary);
+
+}
+
+
+.article-content li{
+
+margin-bottom:12px;
+
+}
+
+
+/* Scientific quote / key insight blocks */
+
+.article-quote{
+
+margin:40px 0;
+
+padding:30px;
+
+border-left:4px solid var(--science-green);
+
+background:rgba(0,208,132,.05);
+
+border-radius:12px;
+
+font-size:1.1rem;
+
+}
+
+
+/* Article images */
+
+.article-content img{
+
+width:100%;
+
+height:auto;
+
+display:block;
+
+margin:40px auto;
+
+border-radius:18px;
+
+}
+
+
+/* Article captions */
+
+.image-caption{
+
+text-align:center;
+
+font-size:.9rem;
+
+color:var(--text-muted);
+
+margin-top:-25px;
+
+margin-bottom:40px;
+
+}
+
+
+/* Reading experience */
+
+.article-content blockquote{
+
+margin:40px 0;
+
+padding:25px;
+
+border-radius:12px;
+
+background:var(--bg-secondary);
+
+font-style:italic;
+
+color:var(--text-secondary);
+
+}
+/* ==========================================================
+   ARTICLE METADATA SYSTEM
+   Designed for scalable knowledge publishing
+========================================================== */
+
+.article-meta{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+align-items:center;
+
+margin:25px 0 40px;
+
+padding-bottom:25px;
+
+border-bottom:1px solid var(--border);
+
+color:var(--text-muted);
+
+font-size:.9rem;
+
+}
+
+
+/* Metadata items */
+
+.meta-item{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+}
+
+
+/* Category labels */
+
+.article-category{
+
+display:inline-block;
+
+padding:6px 14px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.85rem;
+
+font-weight:700;
+
+}
+
+
+/* Reading time */
+
+.reading-time{
+
+color:var(--text-secondary);
+
+}
+
+
+/* Article author information */
+
+.article-author{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+margin:30px 0;
+
+}
+
+
+.author-avatar{
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+background:var(--bg-secondary);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:700;
+
+color:var(--science-green);
+
+}
+
+
+.author-details{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+
+.author-name{
+
+font-weight:700;
+
+color:var(--text-primary);
+
+}
+
+
+.author-role{
+
+font-size:.85rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Article status badges */
+
+.article-badge{
+
+padding:5px 12px;
+
+border-radius:20px;
+
+font-size:.8rem;
+
+font-weight:700;
+
+background:var(--bg-secondary);
+
+color:var(--science-green);
+
+}
+
+
+/* Publication date */
+
+.article-date{
+
+font-size:.9rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Mobile adjustment */
+
+@media(max-width:768px){
+
+.article-meta{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+}
+/* ==========================================================
+   ARTICLE NAVIGATION SYSTEM
+   Designed for large-scale knowledge discovery
+========================================================== */
+
+.article-navigation{
+
+display:flex;
+
+justify-content:space-between;
+
+gap:25px;
+
+margin:60px 0;
+
+padding-top:40px;
+
+border-top:1px solid var(--border);
+
+}
+
+
+/* Navigation cards */
+
+.nav-card{
+
+flex:1;
+
+padding:25px;
+
+background:var(--bg-secondary);
+
+border-radius:16px;
+
+text-decoration:none;
+
+transition:.3s ease;
+
+border:1px solid transparent;
+
+}
+
+
+/* Hover effect */
+
+.nav-card:hover{
+
+border-color:var(--science-green);
+
+transform:translateY(-5px);
+
+}
+
+
+/* Navigation labels */
+
+.nav-label{
+
+display:block;
+
+font-size:.8rem;
+
+text-transform:uppercase;
+
+letter-spacing:.1em;
+
+color:var(--text-muted);
+
+margin-bottom:10px;
+
+}
+
+
+/* Navigation titles */
+
+.nav-title{
+
+font-size:1.05rem;
+
+font-weight:700;
+
+color:var(--text-primary);
+
+}
+
+
+/* Previous article */
+
+.nav-prev{
+
+text-align:left;
+
+}
+
+
+/* Next article */
+
+.nav-next{
+
+text-align:right;
+
+}
+
+
+/* Related article section */
+
+.related-articles{
+
+margin:80px 0;
+
+padding:40px;
+
+background:var(--bg-secondary);
+
+border-radius:20px;
+
+}
+
+
+.related-title{
+
+font-size:1.8rem;
+
+margin-bottom:30px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Mobile navigation */
+
+@media(max-width:768px){
+
+.article-navigation{
+
+flex-direction:column;
+
+}
+
+
+.nav-next,
+.nav-prev{
+
+text-align:left;
+
+}
+
+}
+/* ==========================================================
+   ARTICLE RESEARCH ELEMENTS SYSTEM
+   Designed for scientific knowledge presentation
+========================================================== */
+
+.research-box{
+
+margin:40px 0;
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:18px;
+
+border:1px solid var(--border);
+
+}
+
+
+/* Research box heading */
+
+.research-box h3{
+
+margin-top:0;
+
+margin-bottom:20px;
+
+color:var(--science-green);
+
+font-size:1.4rem;
+
+}
+
+
+/* Key findings */
+
+.key-findings{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+/* Finding item */
+
+.finding-item{
+
+padding:20px;
+
+border-radius:12px;
+
+background:#050b09;
+
+border-left:3px solid var(--science-green);
+
+}
+
+
+.finding-item strong{
+
+display:block;
+
+margin-bottom:8px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Scientific highlight */
+
+.highlight-box{
+
+padding:25px;
+
+margin:35px 0;
+
+background:rgba(0,208,132,.06);
+
+border-radius:14px;
+
+border:1px solid rgba(0,208,132,.2);
+
+}
+
+
+.highlight-box p{
+
+margin:0;
+
+}
+
+
+/* Data/statistics display */
+
+.data-point{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:20px;
+
+padding:18px 0;
+
+border-bottom:1px solid var(--border);
+
+}
+
+
+.data-label{
+
+color:var(--text-secondary);
+
+}
+
+
+.data-value{
+
+font-size:1.2rem;
+
+font-weight:800;
+
+color:var(--science-green);
+
+}
+
+
+/* Mobile adjustment */
+
+@media(max-width:768px){
+
+.data-point{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+}
+/* ==========================================================
+   ARTICLE MEDIA SYSTEM
+   Designed for scientific visual publishing
+========================================================== */
+
+.article-media{
+
+margin:50px 0;
+
+}
+
+
+/* Media container */
+
+.media-container{
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:20px;
+
+background:var(--bg-secondary);
+
+}
+
+
+/* Media images */
+
+.media-container img{
+
+width:100%;
+
+height:auto;
+
+display:block;
+
+transition:transform .5s ease;
+
+}
+
+
+/* Image interaction */
+
+.media-container:hover img{
+
+transform:scale(1.03);
+
+}
+
+
+/* Media caption */
+
+.media-caption{
+
+padding:15px 20px;
+
+font-size:.9rem;
+
+color:var(--text-muted);
+
+text-align:center;
+
+}
+
+
+/* Scientific diagrams */
+
+.science-diagram{
+
+margin:50px auto;
+
+max-width:100%;
+
+padding:25px;
+
+background:var(--bg-secondary);
+
+border-radius:18px;
+
+border:1px solid var(--border);
+
+}
+
+
+/* Diagram title */
+
+.diagram-title{
+
+font-size:1.1rem;
+
+font-weight:700;
+
+margin-bottom:15px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Video / animation placeholder */
+
+.media-video{
+
+width:100%;
+
+aspect-ratio:16/9;
+
+background:#050b09;
+
+border-radius:18px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:var(--science-green);
+
+font-weight:700;
+
+}
+
+
+/* Mobile media adjustment */
+
+@media(max-width:768px){
+
+.article-media{
+
+margin:35px 0;
+
+}
+
+.science-diagram{
+
+padding:15px;
+
+}
+
+}
+/* ==========================================================
+   ARTICLE ENGAGEMENT SYSTEM
+   Designed for long-term knowledge discovery
+========================================================== */
+
+.article-engagement{
+
+margin:70px 0;
+
+}
+
+
+/* Topic tags */
+
+.topic-tags{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:12px;
+
+margin:30px 0;
+
+}
+
+
+.topic-tag{
+
+padding:8px 16px;
+
+border-radius:50px;
+
+background:var(--bg-secondary);
+
+border:1px solid var(--border);
+
+color:var(--text-secondary);
+
+font-size:.9rem;
+
+text-decoration:none;
+
+transition:.3s ease;
+
+}
+
+
+.topic-tag:hover{
+
+color:var(--science-green);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Learning pathway */
+
+.learning-path{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:20px;
+
+margin:50px 0;
+
+}
+
+
+.path-title{
+
+font-size:1.5rem;
+
+font-weight:700;
+
+margin-bottom:25px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Path items */
+
+.path-item{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+padding:15px 0;
+
+border-bottom:1px solid var(--border);
+
+}
+
+
+.path-number{
+
+width:35px;
+
+height:35px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-weight:700;
+
+}
+
+
+.path-text{
+
+color:var(--text-secondary);
+
+}
+
+
+/* Article feedback area */
+
+.article-feedback{
+
+margin-top:50px;
+
+padding:30px;
+
+background:var(--bg-secondary);
+
+border-radius:18px;
+
+text-align:center;
+
+}
+
+
+.feedback-title{
+
+font-size:1.2rem;
+
+font-weight:700;
+
+margin-bottom:15px;
+
+}
+
+
+/* Mobile adjustment */
+
+@media(max-width:768px){
+
+.path-item{
+
+align-items:flex-start;
+
+}
+
+}
+/* ==========================================================
+   ARTICLE AUTHORITY SYSTEM
+   Designed for scientific credibility and transparency
+========================================================== */
+
+.article-authority{
+
+margin:80px 0;
+
+padding:40px;
+
+background:var(--bg-secondary);
+
+border-radius:20px;
+
+}
+
+
+/* Authority heading */
+
+.authority-title{
+
+font-size:1.8rem;
+
+font-weight:800;
+
+margin-bottom:30px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Sources section */
+
+.sources-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+/* Source item */
+
+.source-item{
+
+padding:18px;
+
+border-left:3px solid var(--science-green);
+
+background:#050b09;
+
+border-radius:10px;
+
+color:var(--text-secondary);
+
+}
+
+
+/* Source links */
+
+.source-item a{
+
+color:var(--science-green);
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+
+.source-item a:hover{
+
+text-decoration:underline;
+
+}
+
+
+/* Research methodology */
+
+.methodology-box{
+
+margin:40px 0;
+
+padding:30px;
+
+border:1px solid var(--border);
+
+border-radius:16px;
+
+}
+
+
+/* Methodology title */
+
+.methodology-title{
+
+font-size:1.2rem;
+
+font-weight:700;
+
+margin-bottom:15px;
+
+color:var(--science-green);
+
+}
+
+
+/* Editorial note */
+
+.editorial-note{
+
+padding:25px;
+
+margin:40px 0;
+
+background:rgba(0,208,132,.05);
+
+border-radius:14px;
+
+color:var(--text-secondary);
+
+}
+
+
+/* Mobile adjustment */
+
+@media(max-width:768px){
+
+.article-authority{
+
+padding:25px;
+
+}
+
+}
+/* ==========================================================
+   ARTICLE ACCESSIBILITY SYSTEM
+   Designed for professional long-term readability
+========================================================== */
+
+.article-reading-tools{
+
+display:flex;
+
+justify-content:flex-end;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:30px;
+
+}
+
+
+/* Reading buttons */
+
+.reading-btn{
+
+width:40px;
+
+height:40px;
+
+border-radius:50%;
+
+border:1px solid var(--border);
+
+background:var(--bg-secondary);
+
+color:var(--text-primary);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+cursor:pointer;
+
+transition:.3s ease;
+
+}
+
+
+.reading-btn:hover{
+
+border-color:var(--science-green);
+
+color:var(--science-green);
+
+}
+
+
+/* Accessibility text size helpers */
+
+.text-large{
+
+font-size:1.15em;
+
+}
+
+
+.text-small{
+
+font-size:.9em;
+
+}
+
+
+/* Article table system */
+
+.article-table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin:40px 0;
+
+overflow:hidden;
+
+}
+
+
+/* Table cells */
+
+.article-table th,
+.article-table td{
+
+padding:15px;
+
+border-bottom:1px solid var(--border);
+
+text-align:left;
+
+}
+
+
+/* Table heading */
+
+.article-table th{
+
+color:var(--science-green);
+
+font-weight:700;
+
+}
+
+
+/* Reading divider */
+
+.reading-divider{
+
+height:1px;
+
+background:var(--border);
+
+margin:50px 0;
+
+}
+
+
+/* Mobile table handling */
+
+@media(max-width:768px){
+
+.article-table{
+
+display:block;
+
+overflow-x:auto;
+
+}
+
+.article-reading-tools{
+
+justify-content:flex-start;
+
+}
+
+}
+/* ==========================================================
+   ARTICLE DISCOVERY ORGANIZATION SYSTEM
+   Designed for large-scale knowledge libraries
+========================================================== */
+
+.article-discovery{
+
+margin:80px 0;
+
+}
+
+
+/* Search container */
+
+.article-search{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+padding:20px;
+
+background:var(--bg-secondary);
+
+border-radius:18px;
+
+border:1px solid var(--border);
+
+}
+
+
+/* Search input */
+
+.article-search input{
+
+flex:1;
+
+padding:14px 18px;
+
+border-radius:12px;
+
+border:1px solid var(--border);
+
+background:#050b09;
+
+color:var(--text-primary);
+
+font-size:1rem;
+
+outline:none;
+
+}
+
+
+.article-search input:focus{
+
+border-color:var(--science-green);
+
+}
+
+
+/* Category grid */
+
+.category-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+
+/* Category card */
+
+.category-card{
+
+padding:30px;
+
+background:var(--bg-secondary);
+
+border-radius:18px;
+
+border:1px solid transparent;
+
+text-decoration:none;
+
+transition:.3s ease;
+
+}
+
+
+/* Category hover */
+
+.category-card:hover{
+
+border-color:var(--science-green);
+
+transform:translateY(-5px);
+
+}
+
+
+/* Category title */
+
+.category-card h3{
+
+margin-bottom:12px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Category description */
+
+.category-card p{
+
+color:var(--text-secondary);
+
+font-size:.95rem;
+
+}
+
+
+/* Article count */
+
+.article-count{
+
+display:inline-block;
+
+margin-top:15px;
+
+color:var(--science-green);
+
+font-weight:700;
+
+}
+
+
+/* Mobile search */
+
+@media(max-width:768px){
+
+.article-search{
+
+flex-direction:column;
+
+align-items:stretch;
+
+}
+
+}
+/* ==========================================================
+   KNOWLEDGE LIBRARY ARCHITECTURE
+   Designed for large-scale scientific collections
+========================================================== */
+
+.knowledge-library{
+
+margin:80px 0;
+
+}
+
+
+/* Library header */
+
+.library-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:end;
+
+gap:30px;
+
+margin-bottom:40px;
+
+}
+
+
+.library-title{
+
+font-size:2.5rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+}
+
+
+/* Library description */
+
+.library-description{
+
+max-width:650px;
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Featured article section */
+
+.featured-article{
+
+display:grid;
+
+grid-template-columns:1.2fr 1fr;
+
+gap:40px;
+
+padding:40px;
+
+background:var(--bg-secondary);
+
+border-radius:24px;
+
+margin-bottom:60px;
+
+}
+
+
+/* Featured image */
+
+.featured-image{
+
+border-radius:18px;
+
+overflow:hidden;
+
+}
+
+
+.featured-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+
+/* Featured content */
+
+.featured-content h2{
+
+font-size:2rem;
+
+margin-bottom:20px;
+
+color:var(--text-primary);
+
+}
+
+
+.featured-content p{
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Mobile library */
+
+@media(max-width:768px){
+
+.library-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+
+.featured-article{
+
+grid-template-columns:1fr;
+
+padding:25px;
+
+}
+
+}
+/* ==========================================================
+   KNOWLEDGE COLLECTION CARD SYSTEM
+   Designed for scalable article libraries
+========================================================== */
+
+.article-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+
+/* Article card */
+
+.article-card{
+
+background:var(--bg-secondary);
+
+border-radius:20px;
+
+overflow:hidden;
+
+border:1px solid transparent;
+
+transition:.3s ease;
+
+}
+
+
+/* Card hover */
+
+.article-card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Card image */
+
+.article-card-image{
+
+height:220px;
+
+overflow:hidden;
+
+}
+
+
+.article-card-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+transition:.5s ease;
+
+}
+
+
+.article-card:hover img{
+
+transform:scale(1.05);
+
+}
+
+
+/* Card content */
+
+.article-card-content{
+
+padding:25px;
+
+}
+
+
+/* Card category */
+
+.card-category{
+
+font-size:.8rem;
+
+text-transform:uppercase;
+
+letter-spacing:.1em;
+
+color:var(--science-green);
+
+font-weight:700;
+
+}
+
+
+/* Card title */
+
+.article-card h3{
+
+margin:15px 0;
+
+font-size:1.25rem;
+
+color:var(--text-primary);
+
+}
+
+
+/* Card summary */
+
+.article-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Card footer */
+
+.card-footer{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-top:25px;
+
+font-size:.85rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Mobile cards */
+
+@media(max-width:768px){
+
+.article-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.article-card-image{
+
+height:200px;
+
+}
+
+}
+/* ==========================================================
+   KNOWLEDGE HUB SYSTEM
+   Designed for scalable scientific categories
+========================================================== */
+
+.knowledge-hub{
+
+margin:90px 0;
+
+}
+
+
+/* Hub banner */
+
+.hub-banner{
+
+padding:50px;
+
+background:var(--bg-secondary);
+
+border-radius:28px;
+
+border:1px solid var(--border);
+
+margin-bottom:50px;
+
+}
+
+
+.hub-banner h1{
+
+font-size:clamp(2rem,5vw,3.5rem);
+
+margin-bottom:20px;
+
+color:var(--text-primary);
+
+}
+
+
+.hub-banner p{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Hub statistics */
+
+.hub-stats{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:25px;
+
+margin:40px 0;
+
+}
+
+
+.stat-card{
+
+padding:25px;
+
+background:#050b09;
+
+border-radius:16px;
+
+text-align:center;
+
+border:1px solid var(--border);
+
+}
+
+
+.stat-number{
+
+display:block;
+
+font-size:2rem;
+
+font-weight:800;
+
+color:var(--science-green);
+
+}
+
+
+.stat-label{
+
+color:var(--text-muted);
+
+font-size:.9rem;
+
+}
+
+
+/* Hub sections */
+
+.hub-section{
+
+margin:60px 0;
+
+}
+
+
+.hub-section-title{
+
+font-size:1.8rem;
+
+font-weight:800;
+
+margin-bottom:30px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Mobile hub */
+
+@media(max-width:768px){
+
+.hub-banner{
+
+padding:30px;
+
+}
+
+}
+/* ==========================================================
+   FEATURED RESEARCH SHOWCASE SYSTEM
+   Designed for premium scientific publishing
+========================================================== */
+
+.featured-showcase{
+
+margin:90px 0;
+
+}
+
+
+/* Showcase header */
+
+.showcase-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:40px;
+
+}
+
+
+.showcase-title{
+
+font-size:2rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+}
+
+
+/* Featured grid */
+
+.showcase-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+
+/* Showcase card */
+
+.showcase-card{
+
+position:relative;
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+overflow:hidden;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.showcase-card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Featured label */
+
+.featured-label{
+
+display:inline-block;
+
+padding:6px 14px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+
+/* Showcase heading */
+
+.showcase-card h3{
+
+font-size:1.4rem;
+
+margin-bottom:15px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Showcase description */
+
+.showcase-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Showcase action */
+
+.showcase-link{
+
+display:inline-block;
+
+margin-top:20px;
+
+color:var(--science-green);
+
+font-weight:700;
+
+text-decoration:none;
+
+}
+
+
+/* Mobile showcase */
+
+@media(max-width:768px){
+
+.showcase-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+}
+/* ==========================================================
+   EDITORIAL TIMELINE SYSTEM
+   Designed for scientific knowledge evolution
+========================================================== */
+
+.science-timeline{
+
+margin:90px 0;
+
+position:relative;
+
+}
+
+
+/* Timeline line */
+
+.timeline-container{
+
+position:relative;
+
+padding-left:40px;
+
+}
+
+
+/* Vertical line */
+
+.timeline-container::before{
+
+content:"";
+
+position:absolute;
+
+left:15px;
+
+top:0;
+
+bottom:0;
+
+width:2px;
+
+background:var(--border);
+
+}
+
+
+/* Timeline item */
+
+.timeline-item{
+
+position:relative;
+
+margin-bottom:45px;
+
+}
+
+
+/* Timeline marker */
+
+.timeline-marker{
+
+position:absolute;
+
+left:-40px;
+
+top:5px;
+
+width:30px;
+
+height:30px;
+
+border-radius:50%;
+
+background:var(--science-green);
+
+border:6px solid var(--bg-primary);
+
+}
+
+
+/* Timeline content */
+
+.timeline-content{
+
+padding:25px;
+
+background:var(--bg-secondary);
+
+border-radius:18px;
+
+border:1px solid var(--border);
+
+}
+
+
+/* Timeline year */
+
+.timeline-year{
+
+font-size:1.2rem;
+
+font-weight:800;
+
+color:var(--science-green);
+
+margin-bottom:10px;
+
+}
+
+
+/* Timeline title */
+
+.timeline-content h3{
+
+margin-bottom:12px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Timeline description */
+
+.timeline-content p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile timeline */
+
+@media(max-width:768px){
+
+.timeline-container{
+
+padding-left:30px;
+
+}
+
+.timeline-marker{
+
+left:-30px;
+
+}
+
+}
+/* ==========================================================
+   EXPERT PROFILE SYSTEM
+   Designed for scientific editorial credibility
+========================================================== */
+
+.expert-section{
+
+margin:90px 0;
+
+}
+
+
+/* Expert grid */
+
+.expert-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+
+/* Expert card */
+
+.expert-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+text-align:center;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.expert-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Expert image */
+
+.expert-image{
+
+width:90px;
+
+height:90px;
+
+border-radius:50%;
+
+margin:0 auto 20px;
+
+background:#050b09;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:var(--science-green);
+
+font-size:1.5rem;
+
+font-weight:800;
+
+}
+
+
+/* Expert name */
+
+.expert-card h3{
+
+margin-bottom:10px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Expert role */
+
+.expert-role{
+
+color:var(--science-green);
+
+font-weight:700;
+
+font-size:.9rem;
+
+margin-bottom:15px;
+
+}
+
+
+/* Expert description */
+
+.expert-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile expert cards */
+
+@media(max-width:768px){
+
+.expert-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   KNOWLEDGE SUBSCRIPTION SYSTEM
+   Designed for long-term reader engagement
+========================================================== */
+
+.newsletter-section{
+
+margin:90px 0;
+
+padding:50px;
+
+background:var(--bg-secondary);
+
+border-radius:28px;
+
+text-align:center;
+
+}
+
+
+/* Newsletter title */
+
+.newsletter-title{
+
+font-size:2rem;
+
+font-weight:800;
+
+margin-bottom:20px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Newsletter description */
+
+.newsletter-description{
+
+max-width:650px;
+
+margin:0 auto 35px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Newsletter form */
+
+.newsletter-form{
+
+display:flex;
+
+max-width:600px;
+
+margin:auto;
+
+gap:15px;
+
+}
+
+
+/* Newsletter input */
+
+.newsletter-form input{
+
+flex:1;
+
+padding:16px 20px;
+
+border-radius:12px;
+
+border:1px solid var(--border);
+
+background:#050b09;
+
+color:var(--text-primary);
+
+outline:none;
+
+}
+
+
+.newsletter-form input:focus{
+
+border-color:var(--science-green);
+
+}
+
+
+/* Newsletter button */
+
+.newsletter-button{
+
+padding:16px 28px;
+
+border-radius:12px;
+
+border:none;
+
+background:var(--science-green);
+
+color:#050b09;
+
+font-weight:800;
+
+cursor:pointer;
+
+transition:.3s ease;
+
+}
+
+
+.newsletter-button:hover{
+
+transform:translateY(-3px);
+
+}
+
+
+/* Mobile newsletter */
+
+@media(max-width:768px){
+
+.newsletter-section{
+
+padding:30px 20px;
+
+}
+
+
+.newsletter-form{
+
+flex-direction:column;
+
+}
+
+}
+/* ==========================================================
+   KNOWLEDGE SHARING SYSTEM
+   Designed for scientific content distribution
+========================================================== */
+
+.article-sharing{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin:50px 0;
+
+padding:25px;
+
+background:var(--bg-secondary);
+
+border-radius:18px;
+
+}
+
+
+/* Sharing title */
+
+.share-title{
+
+font-weight:700;
+
+color:var(--text-primary);
+
+}
+
+
+/* Share buttons */
+
+.share-button{
+
+width:42px;
+
+height:42px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:#050b09;
+
+border:1px solid var(--border);
+
+color:var(--text-secondary);
+
+text-decoration:none;
+
+transition:.3s ease;
+
+}
+
+
+.share-button:hover{
+
+color:var(--science-green);
+
+border-color:var(--science-green);
+
+transform:translateY(-3px);
+
+}
+
+
+/* Knowledge badge */
+
+.knowledge-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:10px 18px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-weight:700;
+
+font-size:.9rem;
+
+}
+
+
+/* Article promotion block */
+
+.promotion-block{
+
+margin:60px 0;
+
+padding:35px;
+
+border-radius:22px;
+
+background:linear-gradient(
+135deg,
+var(--bg-secondary),
+#050b09
+);
+
+}
+
+
+.promotion-block h3{
+
+margin-bottom:15px;
+
+color:var(--text-primary);
+
+}
+
+
+.promotion-block p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile sharing */
+
+@media(max-width:768px){
+
+.article-sharing{
+
+flex-wrap:wrap;
+
+}
+
+}
+/* ==========================================================
+   ARTICLE COMMUNITY INSIGHT SYSTEM
+   Designed for scientific discussion and feedback
+========================================================== */
+
+.community-section{
+
+margin:90px 0;
+
+padding:45px;
+
+background:var(--bg-secondary);
+
+border-radius:24px;
+
+}
+
+
+/* Community heading */
+
+.community-title{
+
+font-size:2rem;
+
+font-weight:800;
+
+margin-bottom:20px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Community description */
+
+.community-description{
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+max-width:700px;
+
+}
+
+
+/* Question box */
+
+.question-box{
+
+margin-top:35px;
+
+padding:25px;
+
+background:#050b09;
+
+border-radius:16px;
+
+border:1px solid var(--border);
+
+}
+
+
+/* Question title */
+
+.question-title{
+
+font-weight:700;
+
+margin-bottom:15px;
+
+color:var(--science-green);
+
+}
+
+
+/* Comment preview */
+
+.comment-card{
+
+padding:20px;
+
+margin-top:15px;
+
+background:var(--bg-primary);
+
+border-radius:12px;
+
+border-left:3px solid var(--science-green);
+
+}
+
+
+/* Comment author */
+
+.comment-author{
+
+font-weight:700;
+
+color:var(--text-primary);
+
+}
+
+
+/* Comment text */
+
+.comment-text{
+
+margin-top:8px;
+
+color:var(--text-secondary);
+
+line-height:1.6;
+
+}
+
+
+/* Mobile community */
+
+@media(max-width:768px){
+
+.community-section{
+
+padding:30px 20px;
+
+}
+
+}
+/* ==========================================================
+   KNOWLEDGE PATHWAY PROGRESS SYSTEM
+   Designed for structured scientific learning
+========================================================== */
+
+.knowledge-pathway{
+
+margin:90px 0;
+
+}
+
+
+/* Pathway header */
+
+.pathway-header{
+
+margin-bottom:40px;
+
+}
+
+
+.pathway-title{
+
+font-size:2.2rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.pathway-description{
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+max-width:750px;
+
+}
+
+
+/* Learning levels */
+
+.learning-levels{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+
+/* Level card */
+
+.level-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.level-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Level badge */
+
+.level-badge{
+
+display:inline-block;
+
+padding:7px 16px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-weight:700;
+
+font-size:.85rem;
+
+margin-bottom:20px;
+
+}
+
+
+/* Level title */
+
+.level-card h3{
+
+margin-bottom:15px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Level content */
+
+.level-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile pathway */
+
+@media(max-width:768px){
+
+.learning-levels{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   RESEARCH ARCHIVE SYSTEM
+   Designed for long-term scientific knowledge preservation
+========================================================== */
+
+.research-archive{
+
+margin:90px 0;
+
+}
+
+
+/* Archive header */
+
+.archive-header{
+
+padding:45px;
+
+background:var(--bg-secondary);
+
+border-radius:24px;
+
+margin-bottom:50px;
+
+}
+
+
+.archive-title{
+
+font-size:2.2rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.archive-description{
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+max-width:750px;
+
+}
+
+
+/* Archive collection */
+
+.archive-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+
+/* Archive card */
+
+.archive-card{
+
+padding:30px;
+
+background:#050b09;
+
+border-radius:18px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.archive-card:hover{
+
+transform:translateY(-5px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Archive year/category */
+
+.archive-label{
+
+color:var(--science-green);
+
+font-size:.85rem;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+letter-spacing:.08em;
+
+}
+
+
+/* Archive heading */
+
+.archive-card h3{
+
+margin:15px 0;
+
+color:var(--text-primary);
+
+}
+
+
+/* Archive text */
+
+.archive-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile archive */
+
+@media(max-width:768px){
+
+.archive-header{
+
+padding:30px;
+
+}
+
+}
+/* ==========================================================
+   RESEARCH COLLECTION SERIES SYSTEM
+   Designed for connected scientific storytelling
+========================================================== */
+
+.research-series{
+
+margin:90px 0;
+
+}
+
+
+/* Series header */
+
+.series-header{
+
+margin-bottom:45px;
+
+}
+
+
+.series-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.series-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Series grid */
+
+.series-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+
+/* Series card */
+
+.series-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.series-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Series number */
+
+.series-number{
+
+display:inline-block;
+
+font-size:.85rem;
+
+font-weight:700;
+
+color:var(--science-green);
+
+margin-bottom:15px;
+
+}
+
+
+/* Series title */
+
+.series-card h3{
+
+margin-bottom:15px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Series text */
+
+.series-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Series progress */
+
+.series-progress{
+
+margin-top:25px;
+
+height:6px;
+
+background:#050b09;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+
+.series-progress span{
+
+display:block;
+
+height:100%;
+
+background:var(--science-green);
+
+}
+
+
+/* Mobile series */
+
+@media(max-width:768px){
+
+.series-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   RESEARCH IMPACT SYSTEM
+   Designed for knowledge measurement and insights
+========================================================== */
+
+.impact-section{
+
+margin:90px 0;
+
+}
+
+
+/* Impact header */
+
+.impact-header{
+
+margin-bottom:40px;
+
+}
+
+
+.impact-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.impact-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Impact metrics */
+
+.impact-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+
+/* Metric card */
+
+.impact-card{
+
+padding:30px;
+
+background:var(--bg-secondary);
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+text-align:center;
+
+}
+
+
+/* Metric value */
+
+.impact-number{
+
+display:block;
+
+font-size:2.5rem;
+
+font-weight:800;
+
+color:var(--science-green);
+
+margin-bottom:10px;
+
+}
+
+
+/* Metric label */
+
+.impact-label{
+
+color:var(--text-secondary);
+
+font-size:.95rem;
+
+}
+
+
+/* Research highlight */
+
+.impact-highlight{
+
+margin-top:50px;
+
+padding:35px;
+
+background:#050b09;
+
+border-radius:20px;
+
+border-left:4px solid var(--science-green);
+
+}
+
+
+.impact-highlight h3{
+
+margin-bottom:15px;
+
+color:var(--text-primary);
+
+}
+
+
+.impact-highlight p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile impact */
+
+@media(max-width:768px){
+
+.impact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   RELATED KNOWLEDGE RECOMMENDATION SYSTEM
+   Designed for connected scientific discovery
+========================================================== */
+
+.related-knowledge{
+
+margin:90px 0;
+
+}
+
+
+/* Related header */
+
+.related-header{
+
+margin-bottom:40px;
+
+}
+
+
+.related-title{
+
+font-size:2rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.related-description{
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+max-width:700px;
+
+}
+
+
+/* Related grid */
+
+.related-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+
+/* Related card */
+
+.related-card{
+
+padding:30px;
+
+background:var(--bg-secondary);
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.related-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Related category */
+
+.related-category{
+
+font-size:.8rem;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+letter-spacing:.08em;
+
+color:var(--science-green);
+
+}
+
+
+/* Related title */
+
+.related-card h3{
+
+margin:15px 0;
+
+color:var(--text-primary);
+
+}
+
+
+/* Related text */
+
+.related-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile related */
+
+@media(max-width:768px){
+
+.related-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   CITATION & REFERENCE SYSTEM
+   Designed for scientific credibility and documentation
+========================================================== */
+
+.reference-section{
+
+margin:90px 0;
+
+padding:45px;
+
+background:var(--bg-secondary);
+
+border-radius:24px;
+
+}
+
+
+/* Reference heading */
+
+.reference-title{
+
+font-size:2rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:20px;
+
+}
+
+
+/* Reference description */
+
+.reference-description{
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+max-width:750px;
+
+margin-bottom:35px;
+
+}
+
+
+/* Reference list */
+
+.reference-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+/* Reference item */
+
+.reference-item{
+
+padding:20px;
+
+background:#050b09;
+
+border-radius:14px;
+
+border-left:3px solid var(--science-green);
+
+}
+
+
+/* Reference source */
+
+.reference-source{
+
+font-weight:700;
+
+color:var(--text-primary);
+
+margin-bottom:8px;
+
+}
+
+
+/* Reference text */
+
+.reference-text{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+font-size:.95rem;
+
+}
+
+
+/* Further reading */
+
+.further-reading{
+
+margin-top:40px;
+
+padding-top:30px;
+
+border-top:1px solid var(--border);
+
+}
+
+
+.further-reading h3{
+
+color:var(--science-green);
+
+margin-bottom:15px;
+
+}
+
+
+/* Mobile references */
+
+@media(max-width:768px){
+
+.reference-section{
+
+padding:30px 20px;
+
+}
+
+}
+/* ==========================================================
+   ARTICLE VERSION HISTORY SYSTEM
+   Designed for long-term scientific publishing
+========================================================== */
+
+.version-history{
+
+margin:90px 0;
+
+padding:40px;
+
+background:var(--bg-secondary);
+
+border-radius:24px;
+
+}
+
+
+/* Version header */
+
+.version-title{
+
+font-size:2rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:20px;
+
+}
+
+
+/* Version description */
+
+.version-description{
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+max-width:750px;
+
+margin-bottom:35px;
+
+}
+
+
+/* Version timeline */
+
+.version-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+/* Version item */
+
+.version-item{
+
+padding:22px;
+
+background:#050b09;
+
+border-radius:16px;
+
+border-left:3px solid var(--science-green);
+
+}
+
+
+/* Version date */
+
+.version-date{
+
+font-weight:700;
+
+color:var(--science-green);
+
+margin-bottom:10px;
+
+}
+
+
+/* Version text */
+
+.version-text{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Latest update badge */
+
+.update-badge{
+
+display:inline-block;
+
+margin-top:25px;
+
+padding:8px 16px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-weight:700;
+
+font-size:.85rem;
+
+}
+
+
+/* Mobile version */
+
+@media(max-width:768px){
+
+.version-history{
+
+padding:30px 20px;
+
+}
+
+}
+/* ==========================================================
+   READING PROGRESS & BOOKMARK SYSTEM
+   Designed for personalized knowledge journeys
+========================================================== */
+
+.reader-tools{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:20px;
+
+margin:50px 0;
+
+padding:25px;
+
+background:var(--bg-secondary);
+
+border-radius:18px;
+
+}
+
+
+/* Tool group */
+
+.tool-group{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+
+/* Tool button */
+
+.tool-button{
+
+padding:12px 20px;
+
+border-radius:50px;
+
+border:1px solid var(--border);
+
+background:#050b09;
+
+color:var(--text-secondary);
+
+cursor:pointer;
+
+transition:.3s ease;
+
+}
+
+
+.tool-button:hover{
+
+border-color:var(--science-green);
+
+color:var(--science-green);
+
+}
+
+
+/* Reading progress */
+
+.reading-progress{
+
+margin-top:30px;
+
+height:8px;
+
+background:#050b09;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+
+/* Progress bar */
+
+.reading-progress span{
+
+display:block;
+
+height:100%;
+
+width:0;
+
+background:var(--science-green);
+
+}
+
+
+/* Bookmark badge */
+
+.bookmark-status{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:8px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.85rem;
+
+font-weight:700;
+
+}
+
+
+/* Mobile tools */
+
+@media(max-width:768px){
+
+.reader-tools{
+
+flex-direction:column;
+
+align-items:stretch;
+
+}
+
+.tool-group{
+
+justify-content:center;
+
+}
+
+}
+/* ==========================================================
+   KNOWLEDGE MAP SYSTEM
+   Designed for interconnected scientific discovery
+========================================================== */
+
+.knowledge-map{
+
+margin:90px 0;
+
+}
+
+
+/* Map header */
+
+.map-header{
+
+margin-bottom:45px;
+
+}
+
+
+.map-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.map-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Concept grid */
+
+.concept-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+
+/* Concept node */
+
+.concept-node{
+
+padding:30px;
+
+background:var(--bg-secondary);
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+text-align:center;
+
+transition:.3s ease;
+
+}
+
+
+.concept-node:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Concept title */
+
+.concept-node h3{
+
+margin-bottom:12px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Concept text */
+
+.concept-node p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Connection label */
+
+.connection-label{
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:6px 14px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+}
+
+
+/* Mobile map */
+
+@media(max-width:768px){
+
+.concept-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC GLOSSARY SYSTEM
+   Designed for accessible scientific understanding
+========================================================== */
+
+.glossary-section{
+
+margin:90px 0;
+
+}
+
+
+/* Glossary header */
+
+.glossary-header{
+
+margin-bottom:40px;
+
+}
+
+
+.glossary-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.glossary-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Glossary grid */
+
+.glossary-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+
+/* Term card */
+
+.term-card{
+
+padding:30px;
+
+background:var(--bg-secondary);
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.term-card:hover{
+
+transform:translateY(-5px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Term name */
+
+.term-name{
+
+font-size:1.2rem;
+
+font-weight:800;
+
+color:var(--science-green);
+
+margin-bottom:12px;
+
+}
+
+
+/* Term definition */
+
+.term-definition{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Related term */
+
+.related-term{
+
+display:inline-block;
+
+margin-top:18px;
+
+padding:6px 14px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+}
+
+
+/* Mobile glossary */
+
+@media(max-width:768px){
+
+.glossary-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   RESEARCH METHODOLOGY SYSTEM
+   Designed for scientific literacy and transparency
+========================================================== */
+
+.methodology-section{
+
+margin:90px 0;
+
+}
+
+
+/* Methodology header */
+
+.methodology-header{
+
+margin-bottom:45px;
+
+}
+
+
+.methodology-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.methodology-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Methodology steps */
+
+.methodology-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+
+/* Step card */
+
+.method-step{
+
+padding:30px;
+
+background:var(--bg-secondary);
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.method-step:hover{
+
+transform:translateY(-5px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Step number */
+
+.step-number{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:40px;
+
+height:40px;
+
+border-radius:50%;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-weight:800;
+
+margin-bottom:20px;
+
+}
+
+
+/* Step title */
+
+.method-step h3{
+
+margin-bottom:12px;
+
+color:var(--text-primary);
+
+}
+
+
+/* Step description */
+
+.method-step p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile methodology */
+
+@media(max-width:768px){
+
+.methodology-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC PERSPECTIVE SYSTEM
+   Designed for balanced scientific discussion
+========================================================== */
+
+.perspective-section{
+
+margin:90px 0;
+
+padding:45px;
+
+background:var(--bg-secondary);
+
+border-radius:24px;
+
+}
+
+
+/* Perspective header */
+
+.perspective-header{
+
+margin-bottom:40px;
+
+}
+
+
+.perspective-title{
+
+font-size:2.2rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.perspective-description{
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+max-width:750px;
+
+}
+
+
+/* Perspective grid */
+
+.perspective-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+
+/* Perspective card */
+
+.perspective-card{
+
+padding:30px;
+
+background:#050b09;
+
+border-radius:18px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.perspective-card:hover{
+
+transform:translateY(-5px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Perspective label */
+
+.perspective-label{
+
+font-size:.85rem;
+
+font-weight:700;
+
+color:var(--science-green);
+
+text-transform:uppercase;
+
+letter-spacing:.08em;
+
+margin-bottom:15px;
+
+}
+
+
+/* Perspective text */
+
+.perspective-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile perspective */
+
+@media(max-width:768px){
+
+.perspective-section{
+
+padding:30px 20px;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC TIMELINE SYSTEM
+   Designed for discovery history and knowledge evolution
+========================================================== */
+
+.science-timeline{
+
+margin:90px 0;
+
+}
+
+
+/* Timeline header */
+
+.timeline-header{
+
+margin-bottom:45px;
+
+}
+
+
+.timeline-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.timeline-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Timeline container */
+
+.timeline-container{
+
+position:relative;
+
+margin-top:50px;
+
+}
+
+
+/* Timeline item */
+
+.timeline-item{
+
+padding:30px;
+
+margin-bottom:30px;
+
+background:var(--bg-secondary);
+
+border-radius:20px;
+
+border-left:4px solid var(--science-green);
+
+}
+
+
+/* Timeline year */
+
+.timeline-year{
+
+font-size:1.4rem;
+
+font-weight:800;
+
+color:var(--science-green);
+
+margin-bottom:12px;
+
+}
+
+
+/* Timeline content */
+
+.timeline-content{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Timeline category */
+
+.timeline-category{
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:6px 14px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+}
+
+
+/* Mobile timeline */
+
+@media(max-width:768px){
+
+.timeline-item{
+
+padding:25px;
+
+}
+
+}
+/* ==========================================================
+   EXPERT REVIEW & VERIFICATION SYSTEM
+   Designed for scientific credibility and quality control
+========================================================== */
+
+.verification-section{
+
+margin:90px 0;
+
+padding:45px;
+
+background:var(--bg-secondary);
+
+border-radius:24px;
+
+}
+
+
+/* Verification header */
+
+.verification-header{
+
+margin-bottom:40px;
+
+}
+
+
+.verification-title{
+
+font-size:2.2rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.verification-description{
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+max-width:750px;
+
+}
+
+
+/* Verification cards */
+
+.verification-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+
+/* Verification card */
+
+.verification-card{
+
+padding:30px;
+
+background:#050b09;
+
+border-radius:18px;
+
+border:1px solid var(--border);
+
+}
+
+
+/* Verification badge */
+
+.verification-badge{
+
+display:inline-block;
+
+padding:8px 16px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-weight:700;
+
+font-size:.85rem;
+
+margin-bottom:18px;
+
+}
+
+
+/* Verification title */
+
+.verification-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:12px;
+
+}
+
+
+/* Verification text */
+
+.verification-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile verification */
+
+@media(max-width:768px){
+
+.verification-section{
+
+padding:30px 20px;
+
+}
+
+}
+/* ==========================================================
+   RESEARCH LAB & INNOVATION SHOWCASE SYSTEM
+   Designed for future scientific innovation platforms
+========================================================== */
+
+.lab-showcase{
+
+margin:90px 0;
+
+}
+
+
+/* Lab header */
+
+.lab-header{
+
+margin-bottom:45px;
+
+}
+
+
+.lab-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.lab-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Innovation grid */
+
+.innovation-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Innovation card */
+
+.innovation-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.innovation-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Innovation tag */
+
+.innovation-tag{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Innovation title */
+
+.innovation-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Innovation text */
+
+.innovation-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile lab */
+
+@media(max-width:768px){
+
+.innovation-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC DATA RESOURCE SYSTEM
+   Designed for data-driven scientific exploration
+========================================================== */
+
+.data-resource{
+
+margin:90px 0;
+
+}
+
+
+/* Data header */
+
+.data-header{
+
+margin-bottom:45px;
+
+}
+
+
+.data-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.data-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Data resource grid */
+
+.data-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Data card */
+
+.data-card{
+
+padding:32px;
+
+background:var(--bg-secondary);
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.data-card:hover{
+
+transform:translateY(-5px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Data category */
+
+.data-category{
+
+display:inline-block;
+
+font-size:.8rem;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+letter-spacing:.08em;
+
+color:var(--science-green);
+
+margin-bottom:15px;
+
+}
+
+
+/* Data title */
+
+.data-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:12px;
+
+}
+
+
+/* Data text */
+
+.data-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile data */
+
+@media(max-width:768px){
+
+.data-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC SIMULATION SYSTEM
+   Designed for interactive science learning
+========================================================== */
+
+.simulation-section{
+
+margin:90px 0;
+
+}
+
+
+/* Simulation header */
+
+.simulation-header{
+
+margin-bottom:45px;
+
+}
+
+
+.simulation-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.simulation-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Simulation grid */
+
+.simulation-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Simulation card */
+
+.simulation-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.simulation-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Simulation tag */
+
+.simulation-tag{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Simulation title */
+
+.simulation-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Simulation text */
+
+.simulation-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile simulation */
+
+@media(max-width:768px){
+
+.simulation-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC VISUALIZATION GALLERY SYSTEM
+   Designed for visual scientific communication
+========================================================== */
+
+.visual-gallery{
+
+margin:90px 0;
+
+}
+
+
+/* Gallery header */
+
+.gallery-header{
+
+margin-bottom:45px;
+
+}
+
+
+.gallery-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.gallery-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Gallery grid */
+
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Gallery card */
+
+.gallery-card{
+
+overflow:hidden;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.gallery-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Image placeholder */
+
+.gallery-image{
+
+height:220px;
+
+background:#050b09;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:var(--text-muted);
+
+}
+
+
+/* Gallery content */
+
+.gallery-content{
+
+padding:25px;
+
+}
+
+
+/* Gallery category */
+
+.gallery-category{
+
+font-size:.8rem;
+
+font-weight:700;
+
+color:var(--science-green);
+
+text-transform:uppercase;
+
+letter-spacing:.08em;
+
+}
+
+
+/* Gallery title */
+
+.gallery-content h3{
+
+margin:12px 0;
+
+color:var(--text-primary);
+
+}
+
+
+/* Gallery text */
+
+.gallery-content p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile gallery */
+
+@media(max-width:768px){
+
+.gallery-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC EDUCATION COURSE SYSTEM
+   Designed for structured science learning
+========================================================== */
+
+.course-section{
+
+margin:90px 0;
+
+}
+
+
+/* Course header */
+
+.course-header{
+
+margin-bottom:45px;
+
+}
+
+
+.course-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.course-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Course grid */
+
+.course-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Course card */
+
+.course-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.course-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Course level */
+
+.course-level{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Course title */
+
+.course-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Course description */
+
+.course-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Course progress */
+
+.course-progress{
+
+margin-top:25px;
+
+height:7px;
+
+background:#050b09;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+
+.course-progress span{
+
+display:block;
+
+height:100%;
+
+width:0;
+
+background:var(--science-green);
+
+}
+
+
+/* Mobile courses */
+
+@media(max-width:768px){
+
+.course-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   RESEARCH COLLABORATION NETWORK SYSTEM
+   Designed for scientific partnerships and discovery
+========================================================== */
+
+.collaboration-section{
+
+margin:90px 0;
+
+}
+
+
+/* Collaboration header */
+
+.collaboration-header{
+
+margin-bottom:45px;
+
+}
+
+
+.collaboration-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.collaboration-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Collaboration grid */
+
+.collaboration-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Collaboration card */
+
+.collaboration-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.collaboration-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Collaboration type */
+
+.collaboration-type{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Collaboration title */
+
+.collaboration-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Collaboration text */
+
+.collaboration-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile collaboration */
+
+@media(max-width:768px){
+
+.collaboration-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC PUBLICATION ARCHIVE SYSTEM
+   Designed for long-term research preservation
+========================================================== */
+
+.publication-archive{
+
+margin:90px 0;
+
+}
+
+
+/* Archive header */
+
+.archive-header{
+
+margin-bottom:45px;
+
+}
+
+
+.archive-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.archive-description{
+
+max-width:750px;
+
+color:var(--te

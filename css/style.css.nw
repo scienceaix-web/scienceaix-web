@@ -1,97 +1,4 @@
 /* ==========================================================
-   ScienceAiX Premium Stylesheet v2
-   Version: 2.0
-   ========================================================== */
-
-/* ---------- CSS VARIABLES ---------- */
-
-:root{
-
---science-green:#00d084;
---science-green-light:#4cffb0;
-
---bg:#07120f;
---bg-secondary:#0d1b16;
-
---surface:#13241d;
-
---text:#f4f7f5;
---text-muted:#a8b5af;
-
---border:rgba(255,255,255,.08);
-
---radius:18px;
-
---shadow:
-0 20px 50px rgba(0,0,0,.35);
-
---transition:.35s ease;
-
-}
-
-/* ---------- RESET ---------- */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-
-font-family:
-Inter,
-Segoe UI,
-Roboto,
-Arial,
-sans-serif;
-
-background:var(--bg);
-
-color:var(--text);
-
-line-height:1.8;
-
-overflow-x:hidden;
-
-}
-
-img{
-
-display:block;
-
-max-width:100%;
-
-height:auto;
-
-}
-
-a{
-
-text-decoration:none;
-
-color:inherit;
-
-}
-
-ul{
-
-list-style:none;
-
-}
-
-.container{
-
-width:min(1200px,92%);
-
-margin:auto;
-
-}
-/* ==========================================================
    TYPOGRAPHY
    ========================================================== */
 
@@ -185,6 +92,113 @@ margin:0 auto 3rem;
 text-align:center;
 
 color:var(--text-muted);
+
+}
+/* ==========================================================
+   PREMIUM NAVIGATION
+   ========================================================== */
+
+.navbar{
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+background:rgba(7,18,15,.92);
+
+backdrop-filter:blur(16px);
+
+border-bottom:1px solid var(--border);
+
+}
+
+.nav-container{
+
+width:min(1200px,92%);
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:18px 0;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:1.6rem;
+
+font-weight:900;
+
+color:var(--science-green);
+
+letter-spacing:.5px;
+
+}
+
+.logo span{
+
+color:var(--science-green);
+
+}
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:12px 24px;
+
+border-radius:999px;
+
+background:var(--science-green);
+
+color:#07120f;
+
+font-weight:700;
+
+transition:var(--transition);
+
+cursor:pointer;
+
+border:none;
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 30px rgba(0,208,132,.35);
+
+background:var(--science-green-light);
+
+}
+
+.navbar a{
+
+transition:var(--transition);
+
+}
+
+.navbar a:hover{
+
+color:var(--science-green);
 
 }
 /* ==========================================================
@@ -4408,6 +4422,140 @@ grid-template-columns:1fr;
 
 }
 /* ==========================================================
+   RELATED KNOWLEDGE RECOMMENDATION SYSTEM
+   Designed for connected scientific discovery
+========================================================== */
+
+.related-knowledge{
+
+margin:90px 0;
+
+}
+
+
+/* Related header */
+
+.related-header{
+
+margin-bottom:40px;
+
+}
+
+
+.related-title{
+
+font-size:2rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.related-description{
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+max-width:700px;
+
+}
+
+
+/* Related grid */
+
+.related-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+
+/* Related card */
+
+.related-card{
+
+padding:30px;
+
+background:var(--bg-secondary);
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.related-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Related category */
+
+.related-category{
+
+font-size:.8rem;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+letter-spacing:.08em;
+
+color:var(--science-green);
+
+}
+
+
+/* Related title */
+
+.related-card h3{
+
+margin:15px 0;
+
+color:var(--text-primary);
+
+}
+
+
+/* Related text */
+
+.related-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile related */
+
+@media(max-width:768px){
+
+.related-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
    CITATION & REFERENCE SYSTEM
    Designed for scientific credibility and documentation
 ========================================================== */
@@ -6596,4 +6744,7919 @@ margin-bottom:15px;
 
 max-width:750px;
 
-color:var(--te
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Publication grid */
+
+.publication-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Publication card */
+
+.publication-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.publication-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Publication type */
+
+.publication-type{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Publication title */
+
+.publication-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Publication text */
+
+.publication-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Publication metadata */
+
+.publication-meta{
+
+margin-top:20px;
+
+font-size:.85rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Mobile archive */
+
+@media(max-width:768px){
+
+.publication-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC EVENT & CONFERENCE SYSTEM
+   Designed for global scientific engagement
+========================================================== */
+
+.event-section{
+
+margin:90px 0;
+
+}
+
+
+/* Event header */
+
+.event-header{
+
+margin-bottom:45px;
+
+}
+
+
+.event-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.event-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Event grid */
+
+.event-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Event card */
+
+.event-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.event-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Event category */
+
+.event-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Event title */
+
+.event-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Event text */
+
+.event-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Event details */
+
+.event-details{
+
+margin-top:20px;
+
+font-size:.85rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Mobile events */
+
+@media(max-width:768px){
+
+.event-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC COMMUNITY FORUM SYSTEM
+   Designed for knowledge-focused discussions
+========================================================== */
+
+.community-section{
+
+margin:90px 0;
+
+}
+
+
+/* Community header */
+
+.community-header{
+
+margin-bottom:45px;
+
+}
+
+
+.community-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.community-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Community grid */
+
+.community-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Community card */
+
+.community-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.community-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Community category */
+
+.community-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Community title */
+
+.community-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Community text */
+
+.community-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Community statistics */
+
+.community-stats{
+
+margin-top:20px;
+
+font-size:.85rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Mobile community */
+
+@media(max-width:768px){
+
+.community-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC CAREER & OPPORTUNITY SYSTEM
+   Designed for science career development
+========================================================== */
+
+.career-section{
+
+margin:90px 0;
+
+}
+
+
+/* Career header */
+
+.career-header{
+
+margin-bottom:45px;
+
+}
+
+
+.career-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.career-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Career grid */
+
+.career-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Career card */
+
+.career-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.career-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Career category */
+
+.career-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Career title */
+
+.career-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Career text */
+
+.career-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Career details */
+
+.career-details{
+
+margin-top:20px;
+
+font-size:.85rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Mobile career */
+
+@media(max-width:768px){
+
+.career-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC MENTORSHIP SYSTEM
+   Designed for knowledge transfer and scientific growth
+========================================================== */
+
+.mentorship-section{
+
+margin:90px 0;
+
+}
+
+
+/* Mentorship header */
+
+.mentorship-header{
+
+margin-bottom:45px;
+
+}
+
+
+.mentorship-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.mentorship-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Mentor grid */
+
+.mentor-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Mentor card */
+
+.mentor-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.mentor-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Mentor category */
+
+.mentor-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Mentor title */
+
+.mentor-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Mentor text */
+
+.mentor-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mentor details */
+
+.mentor-details{
+
+margin-top:20px;
+
+font-size:.85rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Mobile mentorship */
+
+@media(max-width:768px){
+
+.mentor-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC ACHIEVEMENT & RECOGNITION SYSTEM
+   Designed for celebrating scientific contributions
+========================================================== */
+
+.achievement-section{
+
+margin:90px 0;
+
+}
+
+
+/* Achievement header */
+
+.achievement-header{
+
+margin-bottom:45px;
+
+}
+
+
+.achievement-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.achievement-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Achievement grid */
+
+.achievement-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Achievement card */
+
+.achievement-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.achievement-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Achievement category */
+
+.achievement-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Achievement title */
+
+.achievement-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Achievement text */
+
+.achievement-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Achievement details */
+
+.achievement-details{
+
+margin-top:20px;
+
+font-size:.85rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Mobile achievement */
+
+@media(max-width:768px){
+
+.achievement-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC FUNDING & GRANT SYSTEM
+   Designed for research support and innovation growth
+========================================================== */
+
+.funding-section{
+
+margin:90px 0;
+
+}
+
+
+/* Funding header */
+
+.funding-header{
+
+margin-bottom:45px;
+
+}
+
+
+.funding-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.funding-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Funding grid */
+
+.funding-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Funding card */
+
+.funding-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.funding-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Funding category */
+
+.funding-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Funding title */
+
+.funding-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Funding text */
+
+.funding-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Funding details */
+
+.funding-details{
+
+margin-top:20px;
+
+font-size:.85rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Mobile funding */
+
+@media(max-width:768px){
+
+.funding-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC PARTNERSHIP & INSTITUTION SYSTEM
+   Designed for global scientific relationships
+========================================================== */
+
+.partner-section{
+
+margin:90px 0;
+
+}
+
+
+/* Partner header */
+
+.partner-header{
+
+margin-bottom:45px;
+
+}
+
+
+.partner-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.partner-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Partner grid */
+
+.partner-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Partner card */
+
+.partner-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.partner-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Partner type */
+
+.partner-type{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Partner title */
+
+.partner-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Partner text */
+
+.partner-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Partner details */
+
+.partner-details{
+
+margin-top:20px;
+
+font-size:.85rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Mobile partners */
+
+@media(max-width:768px){
+
+.partner-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC IMPACT MEASUREMENT SYSTEM
+   Designed for tracking knowledge influence
+========================================================== */
+
+.impact-section{
+
+margin:90px 0;
+
+}
+
+
+/* Impact header */
+
+.impact-header{
+
+margin-bottom:45px;
+
+}
+
+
+.impact-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.impact-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Impact grid */
+
+.impact-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Impact card */
+
+.impact-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.impact-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Impact metric */
+
+.impact-metric{
+
+font-size:2rem;
+
+font-weight:800;
+
+color:var(--science-green);
+
+margin-bottom:15px;
+
+}
+
+
+/* Impact title */
+
+.impact-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Impact text */
+
+.impact-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile impact */
+
+@media(max-width:768px){
+
+.impact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC INNOVATION MARKETPLACE SYSTEM
+   Designed for connecting discoveries with applications
+========================================================== */
+
+.innovation-market-section{
+
+margin:90px 0;
+
+}
+
+
+/* Innovation header */
+
+.innovation-header{
+
+margin-bottom:45px;
+
+}
+
+
+.innovation-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.innovation-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Innovation grid */
+
+.innovation-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Innovation card */
+
+.innovation-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.innovation-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Innovation category */
+
+.innovation-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Innovation title */
+
+.innovation-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Innovation text */
+
+.innovation-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Innovation details */
+
+.innovation-details{
+
+margin-top:20px;
+
+font-size:.85rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Mobile innovation */
+
+@media(max-width:768px){
+
+.innovation-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC ETHICS & RESPONSIBLE INNOVATION SYSTEM
+   Designed for responsible scientific advancement
+========================================================== */
+
+.ethics-section{
+
+margin:90px 0;
+
+}
+
+
+/* Ethics header */
+
+.ethics-header{
+
+margin-bottom:45px;
+
+}
+
+
+.ethics-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.ethics-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Ethics grid */
+
+.ethics-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Ethics card */
+
+.ethics-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.ethics-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Ethics category */
+
+.ethics-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Ethics title */
+
+.ethics-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Ethics text */
+
+.ethics-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Ethics details */
+
+.ethics-details{
+
+margin-top:20px;
+
+font-size:.85rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Mobile ethics */
+
+@media(max-width:768px){
+
+.ethics-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC FUTURE FORECASTING SYSTEM
+   Designed for exploring future science directions
+========================================================== */
+
+.future-section{
+
+margin:90px 0;
+
+}
+
+
+/* Future header */
+
+.future-header{
+
+margin-bottom:45px;
+
+}
+
+
+.future-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.future-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Future grid */
+
+.future-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Future card */
+
+.future-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.future-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Future category */
+
+.future-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Future title */
+
+.future-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Future text */
+
+.future-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Future details */
+
+.future-details{
+
+margin-top:20px;
+
+font-size:.85rem;
+
+color:var(--text-muted);
+
+}
+
+
+/* Mobile future */
+
+@media(max-width:768px){
+
+.future-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC KNOWLEDGE INTELLIGENCE DASHBOARD SYSTEM
+   Designed for scientific data insights
+========================================================== */
+
+.dashboard-section{
+
+margin:90px 0;
+
+}
+
+
+/* Dashboard header */
+
+.dashboard-header{
+
+margin-bottom:45px;
+
+}
+
+
+.dashboard-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.dashboard-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Dashboard grid */
+
+.dashboard-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Dashboard card */
+
+.dashboard-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.dashboard-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Dashboard number */
+
+.dashboard-number{
+
+font-size:2.2rem;
+
+font-weight:800;
+
+color:var(--science-green);
+
+margin-bottom:15px;
+
+}
+
+
+/* Dashboard title */
+
+.dashboard-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Dashboard text */
+
+.dashboard-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile dashboard */
+
+@media(max-width:768px){
+
+.dashboard-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC GLOBAL NETWORK SYSTEM
+   Designed for worldwide scientific connection
+========================================================== */
+
+.global-network-section{
+
+margin:90px 0;
+
+}
+
+
+/* Global network header */
+
+.global-network-header{
+
+margin-bottom:45px;
+
+}
+
+
+.global-network-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.global-network-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Global network grid */
+
+.global-network-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Global network card */
+
+.global-network-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.global-network-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Network region */
+
+.network-region{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Network title */
+
+.global-network-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Network text */
+
+.global-network-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile network */
+
+@media(max-width:768px){
+
+.global-network-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC KNOWLEDGE PRESERVATION & LEGACY SYSTEM
+   Designed for long-term scientific memory
+========================================================== */
+
+.legacy-section{
+
+margin:90px 0;
+
+}
+
+
+/* Legacy header */
+
+.legacy-header{
+
+margin-bottom:45px;
+
+}
+
+
+.legacy-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.legacy-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Legacy grid */
+
+.legacy-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Legacy card */
+
+.legacy-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.legacy-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Legacy category */
+
+.legacy-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Legacy title */
+
+.legacy-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Legacy text */
+
+.legacy-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile legacy */
+
+@media(max-width:768px){
+
+.legacy-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC MEDIA & DOCUMENTARY SYSTEM
+   Designed for science storytelling and visual education
+========================================================== */
+
+.media-section{
+
+margin:90px 0;
+
+}
+
+
+/* Media header */
+
+.media-header{
+
+margin-bottom:45px;
+
+}
+
+
+.media-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.media-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Media grid */
+
+.media-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Media card */
+
+.media-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.media-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Media type */
+
+.media-type{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Media title */
+
+.media-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Media text */
+
+.media-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile media */
+
+@media(max-width:768px){
+
+.media-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC EXPLORATION & EXPEDITION SYSTEM
+   Designed for field discovery and scientific journeys
+========================================================== */
+
+.exploration-section{
+
+margin:90px 0;
+
+}
+
+
+/* Exploration header */
+
+.exploration-header{
+
+margin-bottom:45px;
+
+}
+
+
+.exploration-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.exploration-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Exploration grid */
+
+.exploration-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Exploration card */
+
+.exploration-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.exploration-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Exploration category */
+
+.exploration-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Exploration title */
+
+.exploration-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Exploration text */
+
+.exploration-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile exploration */
+
+@media(max-width:768px){
+
+.exploration-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC RESEARCH TIMELINE SYSTEM
+   Designed for scientific history and evolution tracking
+========================================================== */
+
+.timeline-section{
+
+margin:90px 0;
+
+}
+
+
+/* Timeline header */
+
+.timeline-header{
+
+margin-bottom:45px;
+
+}
+
+
+.timeline-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.timeline-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Timeline container */
+
+.timeline-container{
+
+position:relative;
+
+margin-top:40px;
+
+padding-left:30px;
+
+}
+
+
+/* Timeline line */
+
+.timeline-container::before{
+
+content:"";
+
+position:absolute;
+
+left:8px;
+
+top:0;
+
+bottom:0;
+
+width:2px;
+
+background:var(--border);
+
+}
+
+
+/* Timeline item */
+
+.timeline-item{
+
+position:relative;
+
+margin-bottom:35px;
+
+}
+
+
+/* Timeline marker */
+
+.timeline-marker{
+
+position:absolute;
+
+left:-29px;
+
+top:5px;
+
+width:16px;
+
+height:16px;
+
+border-radius:50%;
+
+background:var(--science-green);
+
+}
+
+
+/* Timeline card */
+
+.timeline-card{
+
+padding:30px;
+
+background:var(--bg-secondary);
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+}
+
+
+/* Timeline title */
+
+.timeline-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:12px;
+
+}
+
+
+/* Timeline text */
+
+.timeline-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile timeline */
+
+@media(max-width:768px){
+
+.timeline-container{
+
+padding-left:25px;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC KNOWLEDGE MAP SYSTEM
+   Designed for connected scientific understanding
+========================================================== */
+
+.knowledge-map-section{
+
+margin:90px 0;
+
+}
+
+
+/* Knowledge map header */
+
+.knowledge-map-header{
+
+margin-bottom:45px;
+
+}
+
+
+.knowledge-map-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.knowledge-map-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Knowledge map grid */
+
+.knowledge-map-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Knowledge node */
+
+.knowledge-node{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.knowledge-node:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Knowledge field */
+
+.knowledge-field{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Knowledge node title */
+
+.knowledge-node h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Knowledge node text */
+
+.knowledge-node p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile knowledge map */
+
+@media(max-width:768px){
+
+.knowledge-map-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC EXPERIMENT ARCHIVE SYSTEM
+   Designed for documenting scientific experiments
+========================================================== */
+
+.experiment-section{
+
+margin:90px 0;
+
+}
+
+
+/* Experiment header */
+
+.experiment-header{
+
+margin-bottom:45px;
+
+}
+
+
+.experiment-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.experiment-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Experiment grid */
+
+.experiment-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Experiment card */
+
+.experiment-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.experiment-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Experiment type */
+
+.experiment-type{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Experiment title */
+
+.experiment-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Experiment text */
+
+.experiment-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile experiment */
+
+@media(max-width:768px){
+
+.experiment-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC PEER REVIEW & VERIFICATION SYSTEM
+   Designed for scientific credibility and quality control
+========================================================== */
+
+.review-section{
+
+margin:90px 0;
+
+}
+
+
+/* Review header */
+
+.review-header{
+
+margin-bottom:45px;
+
+}
+
+
+.review-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.review-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Review grid */
+
+.review-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Review card */
+
+.review-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.review-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Review status */
+
+.review-status{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Review title */
+
+.review-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Review text */
+
+.review-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile review */
+
+@media(max-width:768px){
+
+.review-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC OPEN KNOWLEDGE ACCESS SYSTEM
+   Designed for accessible scientific learning
+========================================================== */
+
+.access-section{
+
+margin:90px 0;
+
+}
+
+
+/* Access header */
+
+.access-header{
+
+margin-bottom:45px;
+
+}
+
+
+.access-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.access-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Access grid */
+
+.access-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Access card */
+
+.access-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.access-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Access category */
+
+.access-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Access title */
+
+.access-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Access text */
+
+.access-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile access */
+
+@media(max-width:768px){
+
+.access-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC LEARNING PATHWAY SYSTEM
+   Designed for structured scientific education journeys
+========================================================== */
+
+.learning-path-section{
+
+margin:90px 0;
+
+}
+
+
+/* Learning path header */
+
+.learning-path-header{
+
+margin-bottom:45px;
+
+}
+
+
+.learning-path-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.learning-path-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Learning path grid */
+
+.learning-path-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Learning path card */
+
+.learning-path-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.learning-path-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Learning level */
+
+.learning-level{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Learning title */
+
+.learning-path-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Learning text */
+
+.learning-path-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile learning */
+
+@media(max-width:768px){
+
+.learning-path-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC LEARNING PATHWAY SYSTEM
+   Designed for structured scientific education journeys
+========================================================== */
+
+.learning-path-section{
+
+margin:90px 0;
+
+}
+
+
+/* Learning path header */
+
+.learning-path-header{
+
+margin-bottom:45px;
+
+}
+
+
+.learning-path-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.learning-path-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Learning path grid */
+
+.learning-path-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Learning path card */
+
+.learning-path-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.learning-path-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Learning level */
+
+.learning-level{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Learning title */
+
+.learning-path-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Learning text */
+
+.learning-path-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile learning */
+
+@media(max-width:768px){
+
+.learning-path-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC KNOWLEDGE RECOMMENDATION SYSTEM
+   Designed for intelligent content discovery
+========================================================== */
+
+.recommendation-section{
+
+margin:90px 0;
+
+}
+
+
+/* Recommendation header */
+
+.recommendation-header{
+
+margin-bottom:45px;
+
+}
+
+
+.recommendation-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.recommendation-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Recommendation grid */
+
+.recommendation-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Recommendation card */
+
+.recommendation-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.recommendation-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Recommendation category */
+
+.recommendation-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Recommendation title */
+
+.recommendation-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Recommendation text */
+
+.recommendation-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile recommendation */
+
+@media(max-width:768px){
+
+.recommendation-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC RESEARCH COLLABORATION WORKSPACE SYSTEM
+   Designed for scientific teamwork and project exchange
+========================================================== */
+
+.workspace-section{
+
+margin:90px 0;
+
+}
+
+
+/* Workspace header */
+
+.workspace-header{
+
+margin-bottom:45px;
+
+}
+
+
+.workspace-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.workspace-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Workspace grid */
+
+.workspace-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Workspace card */
+
+.workspace-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.workspace-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Workspace type */
+
+.workspace-type{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Workspace title */
+
+.workspace-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Workspace text */
+
+.workspace-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile workspace */
+
+@media(max-width:768px){
+
+.workspace-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC INNOVATION CHALLENGE SYSTEM
+   Designed for scientific problem solving and creativity
+========================================================== */
+
+.challenge-section{
+
+margin:90px 0;
+
+}
+
+
+/* Challenge header */
+
+.challenge-header{
+
+margin-bottom:45px;
+
+}
+
+
+.challenge-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.challenge-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Challenge grid */
+
+.challenge-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Challenge card */
+
+.challenge-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.challenge-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Challenge category */
+
+.challenge-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Challenge title */
+
+.challenge-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Challenge text */
+
+.challenge-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile challenge */
+
+@media(max-width:768px){
+
+.challenge-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC KNOWLEDGE CONTRIBUTION SYSTEM
+   Designed for community-driven scientific growth
+========================================================== */
+
+.contribution-section{
+
+margin:90px 0;
+
+}
+
+
+/* Contribution header */
+
+.contribution-header{
+
+margin-bottom:45px;
+
+}
+
+
+.contribution-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.contribution-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Contribution grid */
+
+.contribution-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Contribution card */
+
+.contribution-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.contribution-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Contribution type */
+
+.contribution-type{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Contribution title */
+
+.contribution-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Contribution text */
+
+.contribution-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile contribution */
+
+@media(max-width:768px){
+
+.contribution-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC EXPERT NETWORK SYSTEM
+   Designed for connecting experts and learners
+========================================================== */
+
+.expert-network-section{
+
+margin:90px 0;
+
+}
+
+
+/* Expert network header */
+
+.expert-network-header{
+
+margin-bottom:45px;
+
+}
+
+
+.expert-network-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.expert-network-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Expert network grid */
+
+.expert-network-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Expert card */
+
+.expert-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.expert-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Expert field */
+
+.expert-field{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Expert title */
+
+.expert-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Expert text */
+
+.expert-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile expert */
+
+@media(max-width:768px){
+
+.expert-network-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC IMPACT STORY SYSTEM
+   Designed for showcasing science-driven impact
+========================================================== */
+
+.impact-story-section{
+
+margin:90px 0;
+
+}
+
+
+/* Impact story header */
+
+.impact-story-header{
+
+margin-bottom:45px;
+
+}
+
+
+.impact-story-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.impact-story-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Impact story grid */
+
+.impact-story-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Impact story card */
+
+.impact-story-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.impact-story-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Impact category */
+
+.impact-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Impact title */
+
+.impact-story-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Impact text */
+
+.impact-story-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile impact */
+
+@media(max-width:768px){
+
+.impact-story-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC FUTURE LABORATORY SYSTEM
+   Designed for emerging science exploration
+========================================================== */
+
+.future-lab-section{
+
+margin:90px 0;
+
+}
+
+
+/* Future lab header */
+
+.future-lab-header{
+
+margin-bottom:45px;
+
+}
+
+
+.future-lab-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.future-lab-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Future lab grid */
+
+.future-lab-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Future lab card */
+
+.future-lab-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.future-lab-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Future lab category */
+
+.future-lab-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Future lab title */
+
+.future-lab-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Future lab text */
+
+.future-lab-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile future lab */
+
+@media(max-width:768px){
+
+.future-lab-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC DIGITAL MUSEUM SYSTEM
+   Designed for preserving scientific heritage
+========================================================== */
+
+.museum-section{
+
+margin:90px 0;
+
+}
+
+
+/* Museum header */
+
+.museum-header{
+
+margin-bottom:45px;
+
+}
+
+
+.museum-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.museum-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Museum grid */
+
+.museum-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Museum card */
+
+.museum-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.museum-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Museum category */
+
+.museum-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Museum title */
+
+.museum-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Museum text */
+
+.museum-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile museum */
+
+@media(max-width:768px){
+
+.museum-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC DATA VISUALIZATION SYSTEM
+   Designed for scientific data understanding
+========================================================== */
+
+.visualization-section{
+
+margin:90px 0;
+
+}
+
+
+/* Visualization header */
+
+.visualization-header{
+
+margin-bottom:45px;
+
+}
+
+
+.visualization-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.visualization-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Visualization grid */
+
+.visualization-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Visualization card */
+
+.visualization-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.visualization-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Visualization category */
+
+.visualization-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Visualization title */
+
+.visualization-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Visualization text */
+
+.visualization-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile visualization */
+
+@media(max-width:768px){
+
+.visualization-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC SIMULATION & MODELING SYSTEM
+   Designed for interactive scientific exploration
+========================================================== */
+
+.simulation-section{
+
+margin:90px 0;
+
+}
+
+
+/* Simulation header */
+
+.simulation-header{
+
+margin-bottom:45px;
+
+}
+
+
+.simulation-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.simulation-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Simulation grid */
+
+.simulation-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Simulation card */
+
+.simulation-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.simulation-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Simulation category */
+
+.simulation-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Simulation title */
+
+.simulation-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Simulation text */
+
+.simulation-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile simulation */
+
+@media(max-width:768px){
+
+.simulation-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC RESEARCH PUBLICATION SYSTEM
+   Designed for scientific document organization
+========================================================== */
+
+.publication-section{
+
+margin:90px 0;
+
+}
+
+
+/* Publication header */
+
+.publication-header{
+
+margin-bottom:45px;
+
+}
+
+
+.publication-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.publication-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Publication grid */
+
+.publication-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Publication card */
+
+.publication-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.publication-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Publication type */
+
+.publication-type{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Publication title */
+
+.publication-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Publication text */
+
+.publication-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile publication */
+
+@media(max-width:768px){
+
+.publication-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC ETHICS & RESPONSIBILITY SYSTEM
+   Designed for responsible scientific advancement
+========================================================== */
+
+.ethics-section{
+
+margin:90px 0;
+
+}
+
+
+/* Ethics header */
+
+.ethics-header{
+
+margin-bottom:45px;
+
+}
+
+
+.ethics-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.ethics-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Ethics grid */
+
+.ethics-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Ethics card */
+
+.ethics-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.ethics-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Ethics category */
+
+.ethics-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Ethics title */
+
+.ethics-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Ethics text */
+
+.ethics-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile ethics */
+
+@media(max-width:768px){
+
+.ethics-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC CAREER PATHWAY SYSTEM
+   Designed for science education and career development
+========================================================== */
+
+.career-section{
+
+margin:90px 0;
+
+}
+
+
+/* Career header */
+
+.career-header{
+
+margin-bottom:45px;
+
+}
+
+
+.career-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.career-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Career grid */
+
+.career-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Career card */
+
+.career-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.career-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Career category */
+
+.career-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Career title */
+
+.career-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Career text */
+
+.career-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile career */
+
+@media(max-width:768px){
+
+.career-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC COMMUNITY FORUM SYSTEM
+   Designed for scientific discussions and knowledge exchange
+========================================================== */
+
+.forum-section{
+
+margin:90px 0;
+
+}
+
+
+/* Forum header */
+
+.forum-header{
+
+margin-bottom:45px;
+
+}
+
+
+.forum-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.forum-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Forum grid */
+
+.forum-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Forum card */
+
+.forum-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.forum-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Forum category */
+
+.forum-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Forum title */
+
+.forum-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Forum text */
+
+.forum-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile forum */
+
+@media(max-width:768px){
+
+.forum-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC KNOWLEDGE ANALYTICS SYSTEM
+   Designed for scientific insight measurement
+========================================================== */
+
+.analytics-section{
+
+margin:90px 0;
+
+}
+
+
+/* Analytics header */
+
+.analytics-header{
+
+margin-bottom:45px;
+
+}
+
+
+.analytics-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.analytics-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Analytics grid */
+
+.analytics-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Analytics card */
+
+.analytics-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.analytics-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Analytics category */
+
+.analytics-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Analytics title */
+
+.analytics-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Analytics text */
+
+.analytics-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile analytics */
+
+@media(max-width:768px){
+
+.analytics-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC GLOBAL NETWORK SYSTEM
+   Designed for worldwide scientific connection
+========================================================== */
+
+.global-network-section{
+
+margin:90px 0;
+
+}
+
+
+/* Global network header */
+
+.global-network-header{
+
+margin-bottom:45px;
+
+}
+
+
+.global-network-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.global-network-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Global network grid */
+
+.global-network-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Global network card */
+
+.global-network-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.global-network-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Network region */
+
+.network-region{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Network title */
+
+.global-network-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Network text */
+
+.global-network-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile global network */
+
+@media(max-width:768px){
+
+.global-network-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC RESOURCE LIBRARY SYSTEM
+   Designed for organized scientific resources
+========================================================== */
+
+.resource-library-section{
+
+margin:90px 0;
+
+}
+
+
+/* Resource library header */
+
+.resource-library-header{
+
+margin-bottom:45px;
+
+}
+
+
+.resource-library-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.resource-library-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Resource library grid */
+
+.resource-library-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Resource card */
+
+.resource-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.resource-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Resource category */
+
+.resource-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Resource title */
+
+.resource-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Resource text */
+
+.resource-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile resource */
+
+@media(max-width:768px){
+
+.resource-library-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC LEARNING ASSESSMENT SYSTEM
+   Designed for measuring scientific progress
+========================================================== */
+
+.assessment-section{
+
+margin:90px 0;
+
+}
+
+
+/* Assessment header */
+
+.assessment-header{
+
+margin-bottom:45px;
+
+}
+
+
+.assessment-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.assessment-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Assessment grid */
+
+.assessment-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Assessment card */
+
+.assessment-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.assessment-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Assessment category */
+
+.assessment-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Assessment title */
+
+.assessment-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Assessment text */
+
+.assessment-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile assessment */
+
+@media(max-width:768px){
+
+.assessment-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC CERTIFICATION SYSTEM
+   Designed for recognizing scientific achievement
+========================================================== */
+
+.certification-section{
+
+margin:90px 0;
+
+}
+
+
+/* Certification header */
+
+.certification-header{
+
+margin-bottom:45px;
+
+}
+
+
+.certification-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.certification-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Certification grid */
+
+.certification-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Certification card */
+
+.certification-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.certification-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Certification type */
+
+.certification-type{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Certification title */
+
+.certification-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Certification text */
+
+.certification-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile certification */
+
+@media(max-width:768px){
+
+.certification-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC MENTORSHIP SYSTEM
+   Designed for scientific guidance and knowledge transfer
+========================================================== */
+
+.mentorship-section{
+
+margin:90px 0;
+
+}
+
+
+/* Mentorship header */
+
+.mentorship-header{
+
+margin-bottom:45px;
+
+}
+
+
+.mentorship-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.mentorship-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Mentorship grid */
+
+.mentorship-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Mentorship card */
+
+.mentorship-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.mentorship-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Mentorship category */
+
+.mentorship-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Mentorship title */
+
+.mentorship-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Mentorship text */
+
+.mentorship-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile mentorship */
+
+@media(max-width:768px){
+
+.mentorship-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC INNOVATION MARKETPLACE SYSTEM
+   Designed for showcasing scientific solutions
+========================================================== */
+
+.marketplace-section{
+
+margin:90px 0;
+
+}
+
+
+/* Marketplace header */
+
+.marketplace-header{
+
+margin-bottom:45px;
+
+}
+
+
+.marketplace-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.marketplace-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Marketplace grid */
+
+.marketplace-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Marketplace card */
+
+.marketplace-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.marketplace-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Marketplace category */
+
+.marketplace-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Marketplace title */
+
+.marketplace-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Marketplace text */
+
+.marketplace-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile marketplace */
+
+@media(max-width:768px){
+
+.marketplace-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC AI ASSISTANT INTERFACE SYSTEM
+   Designed for intelligent scientific interaction
+========================================================== */
+
+.ai-assistant-section{
+
+margin:90px 0;
+
+}
+
+
+/* AI assistant header */
+
+.ai-assistant-header{
+
+margin-bottom:45px;
+
+}
+
+
+.ai-assistant-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.ai-assistant-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* AI assistant grid */
+
+.ai-assistant-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* AI assistant card */
+
+.ai-assistant-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.ai-assistant-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* AI assistant category */
+
+.ai-assistant-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* AI assistant title */
+
+.ai-assistant-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* AI assistant text */
+
+.ai-assistant-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile AI assistant */
+
+@media(max-width:768px){
+
+.ai-assistant-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   ADVANCED SCIENTIFIC SEARCH & DISCOVERY SYSTEM
+   Designed for intelligent knowledge navigation
+========================================================== */
+
+.search-discovery-section{
+
+margin:90px 0;
+
+}
+
+
+/* Search discovery header */
+
+.search-discovery-header{
+
+margin-bottom:45px;
+
+}
+
+
+.search-discovery-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.search-discovery-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Search discovery grid */
+
+.search-discovery-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Search discovery card */
+
+.search-discovery-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.search-discovery-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Search discovery category */
+
+.search-discovery-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Search discovery title */
+
+.search-discovery-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Search discovery text */
+
+.search-discovery-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile search discovery */
+
+@media(max-width:768px){
+
+.search-discovery-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC USER PROFILE & LEARNING DASHBOARD SYSTEM
+   Designed for personalized scientific learning
+========================================================== */
+
+.dashboard-section{
+
+margin:90px 0;
+
+}
+
+
+/* Dashboard header */
+
+.dashboard-header{
+
+margin-bottom:45px;
+
+}
+
+
+.dashboard-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.dashboard-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Dashboard grid */
+
+.dashboard-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Dashboard card */
+
+.dashboard-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.dashboard-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Dashboard category */
+
+.dashboard-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Dashboard title */
+
+.dashboard-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Dashboard text */
+
+.dashboard-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile dashboard */
+
+@media(max-width:768px){
+
+.dashboard-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC RESEARCH REPOSITORY SYSTEM
+   Designed for structured scientific research storage
+========================================================== */
+
+.repository-section{
+
+margin:90px 0;
+
+}
+
+
+/* Repository header */
+
+.repository-header{
+
+margin-bottom:45px;
+
+}
+
+
+.repository-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.repository-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Repository grid */
+
+.repository-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Repository card */
+
+.repository-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.repository-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Repository type */
+
+.repository-type{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Repository title */
+
+.repository-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Repository text */
+
+.repository-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile repository */
+
+@media(max-width:768px){
+
+.repository-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC EVENTS & CONFERENCE SYSTEM
+   Designed for scientific events and community engagement
+========================================================== */
+
+.events-section{
+
+margin:90px 0;
+
+}
+
+
+/* Events header */
+
+.events-header{
+
+margin-bottom:45px;
+
+}
+
+
+.events-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.events-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Events grid */
+
+.events-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Event card */
+
+.event-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.event-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Event type */
+
+.event-type{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Event title */
+
+.event-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Event text */
+
+.event-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile events */
+
+@media(max-width:768px){
+
+.events-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENTIFIC PARTNERSHIP & COLLABORATION SYSTEM
+   Designed for institutional scientific partnerships
+========================================================== */
+
+.partnership-section{
+
+margin:90px 0;
+
+}
+
+
+/* Partnership header */
+
+.partnership-header{
+
+margin-bottom:45px;
+
+}
+
+
+.partnership-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.partnership-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Partnership grid */
+
+.partnership-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Partnership card */
+
+.partnership-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.partnership-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Partnership type */
+
+.partnership-type{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Partnership title */
+
+.partnership-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Partnership text */
+
+.partnership-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile partnership */
+
+@media(max-width:768px){
+
+.partnership-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   PERSONALIZED LEARNING & RECOMMENDATION SYSTEM
+   Designed for adaptive scientific learning
+========================================================== */
+
+.recommendation-section{
+
+margin:90px 0;
+
+}
+
+
+/* Recommendation header */
+
+.recommendation-header{
+
+margin-bottom:45px;
+
+}
+
+
+.recommendation-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.recommendation-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Recommendation grid */
+
+.recommendation-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Recommendation card */
+
+.recommendation-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.recommendation-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Recommendation category */
+
+.recommendation-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Recommendation title */
+
+.recommendation-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Recommendation text */
+
+.recommendation-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile recommendation */
+
+@media(max-width:768px){
+
+.recommendation-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   PLATFORM SECURITY & TRUST SYSTEM
+   Designed for secure scientific collaboration
+========================================================== */
+
+.security-section{
+
+margin:90px 0;
+
+}
+
+
+/* Security header */
+
+.security-header{
+
+margin-bottom:45px;
+
+}
+
+
+.security-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.security-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Security grid */
+
+.security-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Security card */
+
+.security-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.security-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Security category */
+
+.security-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Security title */
+
+.security-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Security text */
+
+.security-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile security */
+
+@media(max-width:768px){
+
+.security-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   PLATFORM PERFORMANCE & OPTIMIZATION SYSTEM
+   Designed for platform reliability and efficiency
+========================================================== */
+
+.performance-section{
+
+margin:90px 0;
+
+}
+
+
+/* Performance header */
+
+.performance-header{
+
+margin-bottom:45px;
+
+}
+
+
+.performance-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.performance-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Performance grid */
+
+.performance-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Performance card */
+
+.performance-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.performance-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Performance category */
+
+.performance-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Performance title */
+
+.performance-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Performance text */
+
+.performance-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile performance */
+
+@media(max-width:768px){
+
+.performance-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ==========================================================
+   SCIENCEAIX MASTER PLATFORM INTEGRATION SYSTEM
+   Designed for unified platform architecture
+========================================================== */
+
+.platform-section{
+
+margin:90px 0;
+
+}
+
+
+/* Platform header */
+
+.platform-header{
+
+margin-bottom:45px;
+
+}
+
+
+.platform-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+.platform-description{
+
+max-width:750px;
+
+color:var(--text-secondary);
+
+line-height:1.8;
+
+}
+
+
+/* Platform grid */
+
+.platform-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+
+/* Platform card */
+
+.platform-card{
+
+padding:35px;
+
+background:var(--bg-secondary);
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.3s ease;
+
+}
+
+
+.platform-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--science-green);
+
+}
+
+
+/* Platform category */
+
+.platform-category{
+
+display:inline-block;
+
+padding:7px 15px;
+
+border-radius:50px;
+
+background:rgba(0,208,132,.12);
+
+color:var(--science-green);
+
+font-size:.8rem;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+
+/* Platform title */
+
+.platform-card h3{
+
+color:var(--text-primary);
+
+margin-bottom:15px;
+
+}
+
+
+/* Platform text */
+
+.platform-card p{
+
+color:var(--text-secondary);
+
+line-height:1.7;
+
+}
+
+
+/* Mobile platform */
+
+@media(max-width:768px){
+
+.platform-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}

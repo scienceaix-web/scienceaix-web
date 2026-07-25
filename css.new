@@ -83,4 +83,159 @@
 </body>
 
 </html>
+<!-- =========================
+     PREMIUM NAVIGATION
+========================= -->
+<nav class="navbar">
 
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            🧬 <span>ScienceAiX</span>
+        </a>
+
+        <a href="#library" class="btn">
+            Knowledge Library
+        </a>
+
+    </div>
+
+</nav>
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            AFRICA'S SCIENCE & AI KNOWLEDGE PLATFORM
+        </div>
+
+        <h1>
+            Igniting
+            <span>Africa's Scientific Future</span>
+        </h1>
+
+        <p>
+            Premium articles, deep scientific insights, artificial intelligence,
+            biotechnology, innovation and emerging technologies designed to
+            empower the next generation of African innovators.
+        </p>
+
+        <a href="#library" class="btn">
+            Explore Library
+        </a>
+
+    </div>
+
+</section>
+<!-- ==========================================
+     KNOWLEDGE LIBRARY
+========================================== -->
+
+<section id="library" class="section-padding">
+
+    <div class="container">
+
+        <div class="library-grid">
+
+            <!-- Article 001 -->
+
+            <a href="pages/article-001.html" class="card-link-wrapper">
+
+                <article class="card">
+
+                    <div class="card-tag">
+                        ARTICLE 001
+                    </div>
+
+                    <h3>
+                        What Is Artificial Intelligence?
+                    </h3>
+
+                    <p>
+                        Discover the foundations of Artificial Intelligence,
+                        its history, major branches, real-world applications,
+                        and why AI is becoming one of humanity's most
+                        transformative technologies.
+                    </p>
+
+                </article>
+
+            </a>
+
+            <!-- Article 002 -->
+
+            <a href="pages/article-002.html" class="card-link-wrapper">
+
+                <article class="card">
+
+                    <div class="card-tag">
+                        ARTICLE 002
+                    </div>
+
+                    <h3>
+                        The Evolution of Artificial Intelligence
+                    </h3>
+
+                    <p>
+                        Explore the remarkable journey of Artificial
+                        Intelligence from its earliest concepts to today's
+                        powerful generative AI systems shaping the future.
+                    </p>
+
+                </article>
+
+            </a>
+
+            <!-- Article 003 -->
+
+            <a href="pages/article-003.html" class="card-link-wrapper">
+
+                <article class="card">
+
+                    <div class="card-tag">
+                        ARTICLE 003
+                    </div>
+
+                    <h3>
+                        Machine Learning Explained
+                    </h3>
+
+                    <p>
+                        Learn how machines identify patterns, improve through
+                        experience, and power intelligent applications across
+                        science, healthcare, finance, and industry.
+                    </p>
+
+                </article>
+
+            </a>
+
+            <!-- Article 004 -->
+
+            <a href="pages/article-004.html" class="card-link-wrapper">
+
+                <article class="card">
+
+                    <div class="card-tag">
+                        ARTICLE 004
+                    </div>
+
+                    <h3>
+                        Deep Learning and Neural Networks
+                    </h3>
+
+                    <p>
+                        Understand how neural networks imitate aspects of the
+                        human brain to recognize images, understand language,
+                        and solve complex scientific problems.
+                    </p>
+
+                </article>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>

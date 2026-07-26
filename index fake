@@ -204,6 +204,29 @@
     </div>
 
 </article>
+<article class="card">
+
+    <div class="card-tag">
+        Artificial Intelligence
+    </div>
+
+    <h3>
+        Deep Learning: How Machines Discover Complex Patterns
+    </h3>
+
+    <p>
+        Deep learning is the technology behind many of today's greatest artificial intelligence breakthroughs. Discover how multiple layers of neural networks enable machines to recognize faces, understand speech, translate languages, and solve problems once thought impossible.
+    </p>
+
+    <div class="card-link-wrapper">
+
+        <a href="pages/article-008.html" class="btn">
+            Read Article
+        </a>
+
+    </div>
+
+</article>
 
 </div>
 </section>

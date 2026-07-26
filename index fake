@@ -250,6 +250,29 @@
     </div>
 
 </article>
+<article class="card">
+
+    <div class="card-tag">
+        Artificial Intelligence
+    </div>
+
+    <h3>
+        Generative AI: How Machines Create Text, Images, Music, and More
+    </h3>
+
+    <p>
+        Generative AI has transformed the world by enabling computers to create original content—from writing articles and generating realistic images to composing music, producing videos, and writing computer code. Discover the science behind one of the most influential technologies of the modern era.
+    </p>
+
+    <div class="card-link-wrapper">
+
+        <a href="pages/article-010.html" class="btn">
+            Read Article
+        </a>
+
+    </div>
+
+</article>
 
 </div>
 </section>

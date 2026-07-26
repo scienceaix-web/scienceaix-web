@@ -62,9 +62,102 @@
 <p>
     Learn the fundamentals of Artificial Intelligence, how it works, its history, and why it is transforming the future of science, technology, and society.
 </p>
+<div class="card-link-wrapper">
+<a href="pages/article-001.html" class="btn">
+    Read Article
+</a>
+
+</div>
+
+</article>
+<article class="card">
+<div class="card-tag">
+    Artificial Intelligence
+</div>
+<h3>
+    The Evolution of Artificial Intelligence
+</h3>
+<p>
+    Discover how Artificial Intelligence evolved from early ideas into the powerful technologies shaping today's world.
+</p>
+<div class="card-link-wrapper">
+<a href="pages/article-002.html" class="btn">
+    Read Article
+</a>
+
+</div>
+
+</article>
+<article class="card">
+
+    <div class="card-tag">
+        Artificial Intelligence
+    </div>
+
+    <h3>
+        Machine Learning: How Artificial Intelligence Learns
+    </h3>
+
+    <p>
+        Explore how machines learn from data, recognize patterns, and improve their performance without being explicitly programmed for every task.
+    </p>
+
+    <div class="card-link-wrapper">
+
+        <a href="pages/article-003.html" class="btn">
+            Read Article
+        </a>
+
+    </div>
 
 </article>
 </div>
+<article class="card">
+
+    <div class="card-tag">
+        Artificial Intelligence
+    </div>
+
+    <h3>
+        Data: The Foundation That Powers Artificial Intelligence
+    </h3>
+
+    <p>
+        Learn why data is the lifeblood of Artificial Intelligence and how high-quality information enables AI systems to learn, adapt, and make accurate decisions.
+    </p>
+
+    <div class="card-link-wrapper">
+
+        <a href="pages/article-004.html" class="btn">
+            Read Article
+        </a>
+
+    </div>
+
+</article>
+<article class="card">
+
+    <div class="card-tag">
+        Artificial Intelligence
+    </div>
+
+    <h3>
+        The Dawn of Machine Learning
+    </h3>
+
+    <p>
+        Discover how Machine Learning became one of the most important branches of Artificial Intelligence, transforming data into intelligent predictions and real-world solutions.
+    </p>
+
+    <div class="card-link-wrapper">
+
+        <a href="pages/article-005.html" class="btn">
+            Read Article
+        </a>
+
+    </div>
+
+</article>
 
 </div>
 </section>

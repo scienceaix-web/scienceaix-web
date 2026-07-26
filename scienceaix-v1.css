@@ -14673,5 +14673,12 @@ grid-template-columns:1fr;
     padding:0 1rem;
 
 }
+  .article-container{
+
+    width:94%;
+
+    padding:24px;
+
+}
    
 }

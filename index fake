@@ -227,6 +227,29 @@
     </div>
 
 </article>
+<article class="card">
+
+    <div class="card-tag">
+        Artificial Intelligence
+    </div>
+
+    <h3>
+        Natural Language Processing: How AI Understands Human Language
+    </h3>
+
+    <p>
+        Language is one of humanity's greatest inventions. Discover how Natural Language Processing (NLP) enables artificial intelligence to understand, interpret, and generate human language, powering chatbots, translators, search engines, and intelligent assistants.
+    </p>
+
+    <div class="card-link-wrapper">
+
+        <a href="pages/article-009.html" class="btn">
+            Read Article
+        </a>
+
+    </div>
+
+</article>
 
 </div>
 </section>

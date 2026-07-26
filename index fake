@@ -52,10 +52,18 @@
     Explore premium articles, research, documentaries, and educational resources across science, artificial intelligence, biotechnology, engineering, and innovation.
 </p>
 <div class="library-grid">
-<article class="library-card">
+<article class="card">
+<div class="card-tag">
+    Artificial Intelligence
+</div>
+<h3>
+    What Is Artificial Intelligence?
+</h3>
+<p>
+    Learn the fundamentals of Artificial Intelligence, how it works, its history, and why it is transforming the future of science, technology, and society.
+</p>
 
 </article>
-
 </div>
 
 </div>

@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ScienceAiX | Igniting Africa's Scientific Future</title>
+
+    <link rel="stylesheet" href="scienceaix-v1.css">
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            <span>ScienceAiX</span>
+        </a>
+
+        <a href="#library" class="btn">
+            Explore Library
+        </a>
+
+    </div>
+</nav>
+<header class="hero">
+<div class="hero-content">
+<div class="hero-badge">
+    The Frontier of Understanding
+</div>
+<h1>
+    ScienceAiX
+    <span>Igniting Africa's Scientific Future</span>
+</h1>
+<p>
+    Exploring science, artificial intelligence, biotechnology, engineering, and innovation through premium educational content.
+</p>
+<a href="#library" class="btn">
+    Explore Knowledge Library
+</a>
+
+</div>
+
+</header>
+<section id="library">
+<div class="container">
+<h2 class="section-title">
+    Knowledge Library
+</h2>
+<p class="section-subtitle">
+    Explore premium articles, research, documentaries, and educational resources across science, artificial intelligence, biotechnology, engineering, and innovation.
+</p>
+
+</div>
+</section>
+</body>
+
+</html>

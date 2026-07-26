@@ -158,6 +158,29 @@
     </div>
 
 </article>
+<article class="card">
+
+    <div class="card-tag">
+        Artificial Intelligence
+    </div>
+
+    <h3>
+        Machine Learning: How Artificial Intelligence Learns From Data
+    </h3>
+
+    <p>
+        Machine learning gives computers the ability to discover patterns, learn from experience, and improve their performance using data. Explore the technology that transformed artificial intelligence from simple instructions into adaptive intelligence.
+    </p>
+
+    <div class="card-link-wrapper">
+
+        <a href="pages/article-006.html" class="btn">
+            Read Article
+        </a>
+
+    </div>
+
+</article>
 
 </div>
 </section>

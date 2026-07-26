@@ -181,6 +181,29 @@
     </div>
 
 </article>
+<article class="card">
+
+    <div class="card-tag">
+        Artificial Intelligence
+    </div>
+
+    <h3>
+        Neural Networks: The Architecture Behind Machine Intelligence
+    </h3>
+
+    <p>
+        Inspired by the human brain, artificial neural networks allow computers to recognize patterns, learn from experience, and solve complex problems that traditional programming cannot easily handle.
+    </p>
+
+    <div class="card-link-wrapper">
+
+        <a href="pages/article-007.html" class="btn">
+            Read Article
+        </a>
+
+    </div>
+
+</article>
 
 </div>
 </section>

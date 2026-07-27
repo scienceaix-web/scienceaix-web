@@ -14764,3 +14764,14 @@ grid-template-columns:1fr;
     border-bottom:none;
 
 }
+.sx-component-intro{
+
+    margin:0 0 24px;
+
+    color:#c8d8cf;
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+}

@@ -14943,3 +14943,74 @@ grid-template-columns:1fr;
     }
 
 }
+/* =====================================================
+   SX-007 : CONTINUE LEARNING
+   ===================================================== */
+
+.sx-continue-learning{
+
+    margin:60px 0;
+
+    padding:32px;
+
+    background:#10261b;
+
+    border:1px solid #2b7a50;
+
+    border-radius:18px;
+
+}
+
+.sx-continue-learning .sx-component-header{
+
+    margin-bottom:18px;
+
+}
+
+.sx-continue-learning p{
+
+    margin:0 0 20px;
+
+    color:#d8e7de;
+
+    line-height:1.8;
+
+}
+
+.sx-continue-learning a{
+
+    display:inline-block;
+
+    padding:12px 20px;
+
+    background:#00ff99;
+
+    color:#062015;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    border-radius:10px;
+
+    transition:all .25s ease;
+
+}
+
+.sx-continue-learning a:hover{
+
+    background:#33ffad;
+
+    transform:translateY(-2px);
+
+}
+
+@media (max-width:768px){
+
+    .sx-continue-learning{
+
+        padding:24px;
+
+    }
+
+}

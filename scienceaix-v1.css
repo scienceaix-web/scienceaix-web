@@ -15302,3 +15302,64 @@ grid-template-columns:1fr;
     }
 
 }
+/* =====================================================
+   SX-012 : REFERENCES
+   ===================================================== */
+
+.sx-references{
+
+    margin:60px 0;
+
+    padding:32px;
+
+    background:#10261b;
+
+    border:1px solid #2b7a50;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.25);
+
+}
+
+.sx-references ol{
+
+    margin:20px 0 0;
+
+    padding-left:24px;
+
+}
+
+.sx-references li{
+
+    margin-bottom:16px;
+
+    color:#d8e7de;
+
+    line-height:1.8;
+
+}
+
+.sx-references a{
+
+    color:#00ff99;
+
+    text-decoration:none;
+
+}
+
+.sx-references a:hover{
+
+    text-decoration:underline;
+
+}
+
+@media (max-width:768px){
+
+    .sx-references{
+
+        padding:24px;
+
+    }
+
+}

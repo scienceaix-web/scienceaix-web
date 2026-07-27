@@ -14782,3 +14782,14 @@ grid-template-columns:1fr;
     font-weight:700;
 
 }
+.sx-takeaway-list li::before{
+
+    content:"✓";
+
+    color:#00ff99;
+
+    font-weight:700;
+
+    margin-right:10px;
+
+}

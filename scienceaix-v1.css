@@ -14703,3 +14703,14 @@ grid-template-columns:1fr;
     border-radius:18px;
 
 }
+.sx-component-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:18px;
+
+}

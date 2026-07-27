@@ -14775,3 +14775,10 @@ grid-template-columns:1fr;
     line-height:1.7;
 
 }
+.sx-takeaway-list strong{
+
+    color:#00ff99;
+
+    font-weight:700;
+
+}

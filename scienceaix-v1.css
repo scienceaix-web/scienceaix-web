@@ -14714,3 +14714,53 @@ grid-template-columns:1fr;
     margin-bottom:18px;
 
 }
+.sx-component-icon{
+
+    font-size:1.8rem;
+
+    line-height:1;
+
+}
+.sx-component-header h2{
+
+    margin:0;
+
+    color:#00ff99;
+
+    font-size:1.8rem;
+
+}
+.sx-component-intro{
+
+    margin-bottom:20px;
+
+    color:#b7d8c4;
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+}
+.sx-takeaway-list{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+.sx-takeaway-list li{
+
+    padding:14px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    line-height:1.8;
+
+}
+.sx-takeaway-list li:last-child{
+
+    border-bottom:none;
+
+}

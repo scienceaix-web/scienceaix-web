@@ -15363,3 +15363,86 @@ grid-template-columns:1fr;
     }
 
 }
+/* =====================================================
+   SX-005 : SCIENCE INSIGHT
+   ===================================================== */
+.sx-science-insight{
+
+    margin:60px 0;
+
+    padding:32px;
+
+    background:linear-gradient(135deg,#0d2a1d,#133824);
+
+    border-left:6px solid #00ff99;
+
+    border-radius:18px;
+
+}
+.sx-science-insight{
+
+    margin:60px 0;
+
+    padding:32px;
+
+    background:linear-gradient(135deg,#0d2a1d,#133824);
+
+    border-left:6px solid #00ff99;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.sx-science-insight h2{
+
+    margin:0 0 18px;
+
+    color:#00ff99;
+
+    font-size:1.8rem;
+
+}
+
+.sx-science-insight p{
+
+    margin:18px 0;
+
+    color:#e8f5ec;
+
+    line-height:1.8;
+
+}
+
+.sx-science-insight strong{
+
+    color:#ffffff;
+
+}
+
+.sx-science-insight em{
+
+    color:#7dffc7;
+
+    font-style:italic;
+
+}
+
+@media (max-width:768px){
+
+    .sx-science-insight{
+
+        padding:24px;
+
+        margin:40px 0;
+
+    }
+
+    .sx-science-insight h2{
+
+        font-size:1.5rem;
+
+    }
+
+}

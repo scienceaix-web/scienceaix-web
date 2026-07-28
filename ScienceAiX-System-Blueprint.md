@@ -117,3 +117,16 @@ ScienceAiX is guided by the following core values:
 - Positive impact on society
 
 These values influence every decision made across the platform, from content creation to software development and community engagement.
+---
+
+# Chapter 2 — Repository Architecture
+
+## 2.1 Purpose
+
+The ScienceAiX repository is organized to support long-term growth, maintainability, collaboration, and scalability.
+
+Every folder and file must have a clearly defined purpose.
+
+The repository should remain clean, predictable, and easy to navigate regardless of the size of the platform.
+
+No file or directory should exist without contributing to the architecture of ScienceAiX.

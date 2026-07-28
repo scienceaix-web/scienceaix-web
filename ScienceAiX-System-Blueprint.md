@@ -76,3 +76,10 @@ The vision of ScienceAiX is to become Africa's leading scientific knowledge and 
 ScienceAiX aims to inspire curiosity, support lifelong learning, accelerate innovation, and empower individuals and organizations to solve meaningful problems through scientific knowledge and engineering thinking.
 
 In the long term, ScienceAiX seeks to contribute to a future where African talent plays a leading role in global scientific discovery, technological advancement, and sustainable development.
+## 1.5 Mission
+
+The mission of ScienceAiX is to create a world-class scientific knowledge platform that delivers accurate, practical, and engaging content across science, engineering, technology, innovation, and entrepreneurship.
+
+ScienceAiX is committed to helping learners build strong foundations, supporting researchers and innovators, promoting scientific literacy, encouraging problem-solving, and making knowledge accessible through high-quality educational resources and digital experiences.
+
+Every article, tool, feature, and future service developed by ScienceAiX should contribute to this mission.

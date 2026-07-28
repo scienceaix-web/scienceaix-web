@@ -101,3 +101,19 @@ The platform is guided by the following principles:
 - Continuous improvement through small, stable iterations.
 
 Every major technical decision should support these principles to ensure that ScienceAiX remains reliable, maintainable, and future-ready.
+## 1.7 Core Values
+
+ScienceAiX is guided by the following core values:
+
+- Scientific integrity
+- Curiosity and lifelong learning
+- Excellence in engineering and design
+- Innovation with purpose
+- Accessibility and inclusion
+- Transparency and trust
+- Collaboration and knowledge sharing
+- Long-term thinking
+- Continuous improvement
+- Positive impact on society
+
+These values influence every decision made across the platform, from content creation to software development and community engagement.

@@ -69,3 +69,10 @@ Around the world, millions of people have access to information but struggle to 
 ScienceAiX exists to make science easier to understand, engineering easier to learn, innovation easier to pursue, and knowledge easier to apply.
 
 The platform is built on the belief that accessible scientific knowledge can empower individuals, strengthen communities, accelerate innovation, and contribute to Africa's scientific and technological development while creating value for the global community.
+## 1.4 Vision
+
+The vision of ScienceAiX is to become Africa's leading scientific knowledge and innovation ecosystem, recognized globally for making science, engineering, technology, and entrepreneurship accessible, practical, and transformative.
+
+ScienceAiX aims to inspire curiosity, support lifelong learning, accelerate innovation, and empower individuals and organizations to solve meaningful problems through scientific knowledge and engineering thinking.
+
+In the long term, ScienceAiX seeks to contribute to a future where African talent plays a leading role in global scientific discovery, technological advancement, and sustainable development.

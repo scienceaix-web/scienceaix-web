@@ -45,3 +45,18 @@ It is designed to serve as a trusted ecosystem where learners, researchers, engi
 ScienceAiX combines scientific education, engineering thinking, research, innovation, and digital entrepreneurship into one connected platform.
 
 The long-term goal of ScienceAiX is to become one of Africa's most trusted scientific knowledge platforms while contributing to global scientific education and innovation.
+## 1.2 What ScienceAiX Is Not
+
+ScienceAiX is not just a blog.
+
+ScienceAiX is not just a news website.
+
+ScienceAiX is not just an online course platform.
+
+ScienceAiX is not just a research repository.
+
+ScienceAiX is not just an AI website.
+
+ScienceAiX is not just an engineering website.
+
+ScienceAiX is an integrated scientific knowledge ecosystem that connects learning, research, engineering, innovation, entrepreneurship, and problem-solving into one unified platform.

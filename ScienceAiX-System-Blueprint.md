@@ -83,3 +83,21 @@ The mission of ScienceAiX is to create a world-class scientific knowledge platfo
 ScienceAiX is committed to helping learners build strong foundations, supporting researchers and innovators, promoting scientific literacy, encouraging problem-solving, and making knowledge accessible through high-quality educational resources and digital experiences.
 
 Every article, tool, feature, and future service developed by ScienceAiX should contribute to this mission.
+## 1.6 Engineering Principles
+
+The development of ScienceAiX follows a disciplined engineering approach rather than ad hoc implementation.
+
+The platform is guided by the following principles:
+
+- Architecture before implementation.
+- Simplicity before complexity.
+- Consistency before creativity.
+- Accessibility by default.
+- Mobile-first design.
+- Performance as a core requirement.
+- Scalability for long-term growth.
+- Documentation before major implementation.
+- Reusable components over duplicated code.
+- Continuous improvement through small, stable iterations.
+
+Every major technical decision should support these principles to ensure that ScienceAiX remains reliable, maintainable, and future-ready.

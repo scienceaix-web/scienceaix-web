@@ -128,5 +128,27 @@ The ScienceAiX repository is organized to support long-term growth, maintainabil
 Every folder and file must have a clearly defined purpose.
 
 The repository should remain clean, predictable, and easy to navigate regardless of the size of the platform.
+## 2.2 Root Directory
 
+The root directory contains only files and folders that define, configure, or serve the ScienceAiX platform at the highest level.
+
+The root should remain clean and avoid unnecessary nesting or duplicate resources.
+
+Only essential project files should exist at the root level.
+
+Current root-level directories include:
+
+- assets/
+- css/
+- docs/
+- pages/
+
+Current root-level files include:
+
+- index.html
+- README.md
+- robots.txt
+- scienceaix-core.css
+
+As the platform evolves, additional root-level files may be introduced only when they serve a platform-wide purpose.
 No file or directory should exist without contributing to the architecture of ScienceAiX.

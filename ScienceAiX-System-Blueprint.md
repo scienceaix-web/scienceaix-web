@@ -152,3 +152,21 @@ Current root-level files include:
 
 As the platform evolves, additional root-level files may be introduced only when they serve a platform-wide purpose.
 No file or directory should exist without contributing to the architecture of ScienceAiX.
+## 2.3 Assets Structure
+
+The `assets/` directory stores all static resources used throughout the ScienceAiX platform.
+
+Assets are organized by type to improve maintainability, consistency, and scalability.
+
+The recommended asset structure is:
+
+- images/
+- icons/
+- logos/
+- illustrations/
+- videos/
+- fonts/
+
+Each asset should have a clear purpose and should not be duplicated across multiple locations unless required for optimization or compatibility.
+
+All media files should use descriptive, consistent filenames that make their purpose immediately recognizable.

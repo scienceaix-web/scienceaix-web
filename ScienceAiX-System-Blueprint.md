@@ -170,3 +170,14 @@ The recommended asset structure is:
 Each asset should have a clear purpose and should not be duplicated across multiple locations unless required for optimization or compatibility.
 
 All media files should use descriptive, consistent filenames that make their purpose immediately recognizable.
+## 2.4 Documentation Structure
+
+The `docs/` directory contains the official engineering and architectural documentation for ScienceAiX.
+
+Documentation serves as the primary reference for design decisions, development standards, repository organization, and future expansion.
+
+The central document is:
+
+- ScienceAiX-System-Blueprint.md
+
+Additional documentation files may be introduced as the platform grows, provided they support and do not contradict the system blueprint.

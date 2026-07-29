@@ -1,0 +1,31 @@
+/* ==========================================================================
+   SEARCH BAR
+   ========================================================================== */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+
+  padding: var(--space-2);
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.search-bar-input {
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: var(--color-text);
+  font-size: var(--text-base);
+}
+
+.search-bar-button {
+  flex-shrink: 0;
+}

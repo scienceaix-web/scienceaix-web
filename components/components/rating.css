@@ -1,0 +1,21 @@
+/* ==========================================================================
+   RATING
+   ========================================================================== */
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.rating-star {
+  font-size: 1.25rem;
+  color: var(--color-border);
+  cursor: pointer;
+  transition: color var(--transition-normal);
+}
+
+.rating-star.active,
+.rating-star:hover {
+  color: var(--color-primary);
+}

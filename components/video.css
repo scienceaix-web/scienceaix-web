@@ -1,1 +1,29 @@
-/* ScienceAiX Video */
+/* ==========================================================================
+   VIDEO
+   ========================================================================== */
+
+.video {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+}
+
+.video video,
+.video iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.video-caption {
+  padding: var(--space-3);
+
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+
+  background: var(--color-surface-alt);
+}

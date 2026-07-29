@@ -1,1 +1,49 @@
-/* ScienceAiX Switch */
+/* ==========================================================================
+   SWITCH
+   ========================================================================== */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch-slider {
+  position: absolute;
+  inset: 0;
+
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+
+  cursor: pointer;
+  transition: background var(--transition-normal);
+}
+
+.switch-slider::before {
+  content: "";
+
+  position: absolute;
+  top: 3px;
+  left: 3px;
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+  background: var(--color-white);
+
+  transition: transform var(--transition-normal);
+}
+
+.switch input:checked + .switch-slider {
+  background: var(--color-primary);
+}
+
+.switch input:checked + .switch-slider::before {
+  transform: translateX(24px);
+}

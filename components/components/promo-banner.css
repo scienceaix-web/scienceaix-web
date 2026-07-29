@@ -1,0 +1,39 @@
+/* ==========================================================================
+   PROMO BANNER
+   ========================================================================== */
+
+.promo-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+
+  padding: var(--space-6);
+
+  background: var(--color-primary);
+  border-radius: var(--radius-lg);
+
+  color: var(--color-white);
+}
+
+.promo-banner-content {
+  flex: 1;
+}
+
+.promo-banner-title {
+  margin-bottom: var(--space-2);
+
+  font-size: var(--text-2xl);
+  font-weight: 700;
+}
+
+.promo-banner-description {
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+
+.promo-banner-actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}

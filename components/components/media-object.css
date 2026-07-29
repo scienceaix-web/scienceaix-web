@@ -1,0 +1,37 @@
+/* ==========================================================================
+   MEDIA OBJECT
+   ========================================================================== */
+
+.media-object {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.media-object-image {
+  flex-shrink: 0;
+}
+
+.media-object-image img {
+  display: block;
+  max-width: 100%;
+  border-radius: var(--radius-md);
+}
+
+.media-object-content {
+  flex: 1;
+}
+
+.media-object-title {
+  margin-bottom: var(--space-2);
+
+  color: var(--color-text);
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.media-object-description {
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  line-height: 1.7;
+}

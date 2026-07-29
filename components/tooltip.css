@@ -1,1 +1,37 @@
-/* ScienceAiX Tooltip */
+/* ==========================================================================
+   TOOLTIP
+   ========================================================================== */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+
+  transform: translateX(-50%);
+  white-space: nowrap;
+
+  padding: 0.5rem 0.75rem;
+
+  background: var(--color-surface-alt);
+  color: var(--color-white);
+
+  border-radius: var(--radius-sm);
+
+  font-size: var(--text-xs);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity var(--transition-normal);
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+}

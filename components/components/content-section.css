@@ -1,0 +1,36 @@
+/* ==========================================================================
+   CONTENT SECTION
+   ========================================================================== */
+
+.content-section {
+  padding: var(--space-8) 0;
+}
+
+.content-section-header {
+  margin-bottom: var(--space-6);
+
+  text-align: center;
+}
+
+.content-section-title {
+  margin-bottom: var(--space-2);
+
+  color: var(--color-text);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+}
+
+.content-section-description {
+  max-width: 48rem;
+
+  margin: 0 auto;
+
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+
+.content-section-body {
+  display: grid;
+  gap: var(--space-6);
+}

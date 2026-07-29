@@ -1,0 +1,38 @@
+/* ==========================================================================
+   CALL TO ACTION
+   ========================================================================== */
+
+.cta {
+  padding: var(--space-8);
+
+  text-align: center;
+
+  background: var(--color-primary);
+  border-radius: var(--radius-xl);
+
+  color: var(--color-white);
+}
+
+.cta-title {
+  margin-bottom: var(--space-3);
+
+  font-size: var(--text-3xl);
+  font-weight: 700;
+}
+
+.cta-description {
+  max-width: 42rem;
+
+  margin: 0 auto var(--space-6);
+
+  font-size: var(--text-lg);
+  line-height: 1.7;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+
+  flex-wrap: wrap;
+}

@@ -1,0 +1,28 @@
+/* ==========================================================================
+   SORT DROPDOWN
+   ========================================================================== */
+
+.sort-dropdown {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.sort-dropdown-label {
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.sort-dropdown select {
+  padding: var(--space-2) var(--space-3);
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  color: var(--color-text);
+  font-size: var(--text-sm);
+
+  cursor: pointer;
+}

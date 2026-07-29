@@ -1,1 +1,26 @@
-/* ScienceAiX Badge */
+/* ==========================================================================
+   BADGE
+   ========================================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.35rem 0.75rem;
+
+  border-radius: var(--radius-full);
+
+  background: var(--color-primary);
+  color: var(--color-white);
+
+  font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.badge-outline {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}

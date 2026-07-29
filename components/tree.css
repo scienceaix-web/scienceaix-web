@@ -1,1 +1,32 @@
-/* ScienceAiX Tree */
+/* ==========================================================================
+   TREE
+   ========================================================================== */
+
+.tree {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.tree-item {
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--color-border);
+}
+
+.tree-label {
+  display: inline-block;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.tree-item.active > .tree-label {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.tree-children {
+  margin-top: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}

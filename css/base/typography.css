@@ -1,1 +1,49 @@
-/* ScienceAiX Typography */
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-md);
+  color: var(--color-text);
+  background: var(--color-background);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-white);
+}
+
+h1 {
+  font-size: var(--text-3xl);
+}
+
+h2 {
+  font-size: var(--text-2xl);
+}
+
+h3 {
+  font-size: var(--text-xl);
+}
+
+p {
+  margin-bottom: var(--space-4);
+  color: var(--color-text-secondary);
+}
+
+strong {
+  color: var(--color-white);
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}

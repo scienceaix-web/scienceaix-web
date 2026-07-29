@@ -1,1 +1,28 @@
-/* ScienceAiX Navigation */
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: var(--space-4) 0;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.navbar-link {
+  color: var(--color-text);
+  font-weight: 500;
+  transition: color var(--transition-normal);
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: var(--color-primary);
+}

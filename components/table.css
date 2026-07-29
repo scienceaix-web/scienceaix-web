@@ -1,1 +1,33 @@
-/* ScienceAiX Table */
+/* ==========================================================================
+   TABLE
+   ========================================================================== */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+  background: var(--color-surface-alt);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.table td {
+  color: var(--color-text);
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}

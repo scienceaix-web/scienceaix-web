@@ -1,1 +1,32 @@
-/* ScienceAiX Alert */
+/* ==========================================================================
+   ALERT
+   ========================================================================== */
+
+.alert {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-primary);
+
+  background: var(--color-surface);
+  color: var(--color-text);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.alert-title {
+  margin-bottom: var(--space-2);
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.alert-success {
+  border-left-color: var(--color-primary);
+}
+
+.alert-warning {
+  border-left-color: #ffb300;
+}
+
+.alert-danger {
+  border-left-color: #ef5350;
+}

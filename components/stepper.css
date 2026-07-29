@@ -1,1 +1,42 @@
-/* ScienceAiX Stepper */
+/* ==========================================================================
+   STEPPER
+   ========================================================================== */
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.step-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2rem;
+  height: 2rem;
+
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.step.active .step-circle,
+.step.completed .step-circle {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.step-label {
+  color: var(--color-text);
+}
